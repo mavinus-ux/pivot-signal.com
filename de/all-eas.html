@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Expert Advisors — Pivot-Signal</title>
+<meta name="description" content="Browse all Pivot-Signal Expert Advisors: Pivot Point EA, Breakout EA, Trendfolge EA. Compare features and pick the right one for your market." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pivotsignal.com/de/all-eas.html" />
+  <meta property="og:title" content="Alle Expert Advisors — Pivot-Signal" />
+  <meta property="og:description" content="Vergleiche alle Pivot-Signal EAs: Pivot Point (Range), Breakout (News), Trendfolge (Trend). Wähle den richtigen für deinen Markt." />
+  <meta property="og:image" content="https://pivotsignal.com/imgs/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Pivot-Signal" />
+  <meta property="og:locale" content="de_DE" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://pivotsignal.com/de/all-eas.html" />
+  <meta name="twitter:title" content="Alle Expert Advisors — Pivot-Signal" />
+  <meta name="twitter:description" content="Vergleiche alle Pivot-Signal EAs: Pivot Point (Range), Breakout (News), Trendfolge (Trend). Wähle den richtigen für deinen Markt." />
+  <meta name="twitter:image" content="https://pivotsignal.com/imgs/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/all-eas.html" />
+  <link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/all-eas.html" />
+  <link rel="alternate" hreflang="x-default" href="https://pivotsignal.com/" />
+<style>
+  :root {
+    --bg-black: #000000;
+    --bg-deep: #0A0A0F;
+    --bg-elev: #12121A;
+    --bg-elev-2: #161622;
+    --orange: #FF6B1A;
+    --orange-hot: #FF8533;
+    --orange-soft: rgba(255, 107, 26, 0.12);
+    --green: #88D8C0;
+    --green-glow: #A8E6D0;
+    --green-soft: rgba(136, 216, 192, 0.12);
+    --red: #FF3B47;
+    --text-1: #FFFFFF;
+    --text-2: #B5B5C3;
+    --text-3: #6E6E80;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hot: rgba(255, 107, 26, 0.35);
+    --radius: 14px;
+    --radius-lg: 22px;
+    --shadow-orange: 0 12px 40px -8px rgba(255, 107, 26, 0.45);
+    --shadow-green: 0 12px 40px -8px rgba(136, 216, 192, 0.35);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  #minimax-floating-ball { display: none !important; }
+  body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg-deep); color: var(--text-1); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .header { position: sticky; top: 0; z-index: 100; background: rgba(10, 10, 15, 0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 16px 0; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-1); font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+  .logo-mark { width: 32px; height: 32px; flex-shrink: 0; }
+  .logo-mark img { width: 100%; height: 100%; object-fit: contain; }
+  .logo em { font-style: normal; color: var(--orange); }
+  .nav { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .nav a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav a:hover, .nav a.active { color: var(--text-1); }
+  .header-cta { display: flex; align-items: center; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: var(--radius); font-size: 14px; font-weight: 700; text-decoration: none; transition: all .2s; cursor: pointer; border: none; }
+  .btn-primary { background: var(--orange); color: #fff; box-shadow: var(--shadow-orange); }
+  .btn-primary:hover { background: var(--orange-hot); transform: translateY(-1px); }
+  .btn-sm { padding: 8px 16px; font-size: 13px; }
+
+  /* Page Hero */
+  .page-hero { padding: 80px 0 40px; text-align: center; }
+  .page-hero .eyebrow { display: inline-block; background: var(--green-soft); color: var(--green); border: 1px solid rgba(136, 216, 192, 0.25); border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; margin-bottom: 24px; }
+  .page-hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 18px; }
+  .page-hero h1 span { color: var(--orange); }
+  .page-hero p { font-size: 18px; color: var(--text-2); max-width: 640px; margin: 0 auto; }
+
+  /* EA Cards */
+  .ea-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding: 40px 0 60px; }
+  .ea-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; transition: transform .25s, border-color .25s; display: flex; flex-direction: column; }
+  .ea-card:hover { transform: translateY(-3px); }
+  .ea-card.range { border-color: rgba(136, 216, 192, 0.25); }
+  .ea-card.range:hover { border-color: var(--green); }
+  .ea-card.breakout { border-color: rgba(255, 107, 26, 0.25); }
+  .ea-card.breakout:hover { border-color: var(--orange); }
+  .ea-card.trend { border-color: rgba(255, 200, 87, 0.25); }
+  .ea-card.trend:hover { border-color: #FFC857; }
+  .ea-card-img { background: var(--bg-elev-2); border-radius: var(--radius); padding: 18px; margin: -8px -8px 18px; text-align: center; min-height: 160px; display: flex; align-items: center; justify-content: center; }
+  .ea-card-img img { max-width: 100%; max-height: 140px; }
+  .market-badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; margin-bottom: 10px; }
+  .market-badge.range { background: var(--green-soft); color: var(--green); border: 1px solid rgba(136, 216, 192, 0.3); }
+  .market-badge.breakout { background: var(--orange-soft); color: var(--orange); border: 1px solid rgba(255, 107, 26, 0.3); }
+  .market-badge.trend { background: rgba(255, 200, 87, 0.12); color: #FFC857; border: 1px solid rgba(255, 200, 87, 0.3); }
+  .ea-card .ea-sub { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 6px; }
+  .ea-card h3 { font-size: 22px; font-weight: 800; margin: 0 0 12px; letter-spacing: -0.02em; }
+  .ea-card p { font-size: 14px; color: var(--text-2); line-height: 1.65; margin: 0 0 16px; }
+  .ea-card ul { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-direction: column; gap: 8px; }
+  .ea-card ul li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-2); }
+  .ea-card ul li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .ea-card .ea-link { margin-top: auto; }
+
+  /* Footer */
+  .footer { border-top: 1px solid var(--border); padding: 50px 0 24px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin: 0 0 16px; font-weight: 700; }
+  .footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .footer ul a { color: var(--text-2); text-decoration: none; font-size: 14px; transition: color .2s; }
+  .footer ul a:hover { color: var(--text-1); }
+  .footer-brand p { font-size: 13px; color: var(--text-2); margin: 12px 0 0; line-height: 1.6; }
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; color: var(--text-3); }
+
+  @media (max-width: 768px) {
+    .nav { display: none; }
+    .ea-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 12px; }
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, #88D8C0 0%, #A8E6D0 35%, #FF6B1A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ==========================================================
+     HAMBURGER MENU (Mobile)
+     ========================================================== */
+  .hamburger { display: none; background: transparent; border: 0; padding: 8px; cursor: pointer; color: var(--text-1); }
+  .hamburger svg { width: 24px; height: 24px; }
+  
+  .mobile-menu { position: fixed; top: 0; right: 0; width: 280px; max-width: 85vw; height: 100vh; background: var(--bg-elev); border-left: 1px solid var(--border); z-index: 9999; padding: 80px 24px 24px; transform: translateX(100%); transition: transform .3s ease; overflow-y: auto; }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu a { display: block; color: var(--text-1); text-decoration: none; font-size: 16px; font-weight: 600; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .mobile-menu a:hover, .mobile-menu a.active { color: var(--orange); }
+  .mobile-menu .mobile-lang { display: flex; gap: 8px; margin-top: 24px; padding: 12px 0; border-top: 1px solid var(--border); }
+  .mobile-menu .mobile-lang a { border: 0; padding: 0; font-size: 14px; font-weight: 700; }
+  .mobile-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9998; opacity: 0; pointer-events: none; transition: opacity .3s; }
+  .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+  .mobile-close { position: absolute; top: 20px; right: 20px; background: transparent; border: 0; color: var(--text-1); font-size: 28px; cursor: pointer; padding: 4px 10px; }
+  
+  @media (max-width: 768px) {
+    .hamburger { display: flex; align-items: center; }
+    .nav { display: none !important; }
+  }
+  @media (min-width: 769px) {
+    .mobile-menu, .mobile-overlay { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-mark">
+        <img src="./imgs/logo.png" alt="Pivot-Signal Logo" onerror="this.style.display='none'">
+      </span>
+      <span>Pivot<em>Signal</em></span>
+    </a>
+    <nav class="nav">
+      <a href="./index.html#signals">Signals</a>
+      <a href="./all-eas.html" class="active">All EAs</a>
+      <a href="./custom-ea.html">Custom EA</a>
+      <a href="./expert-advisor.html">What is an EA</a>
+      <a href="./index.html#broker">Partner Broker</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://t.me/pivotsignal" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Telegram</a>
+    </div>
+  </div>
+
+  <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  
+  <div class="mobile-overlay" id="mobile-overlay" onclick="toggleMobileMenu()"></div>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" aria-label="Close menu" onclick="toggleMobileMenu()">×</button>
+    <a href="./index.html">Startseite</a>
+        <a href="./all-eas.html">Alle EAs</a>
+        <a href="./custom-ea.html">Custom EA</a>
+        <a href="./expert-advisor.html">Was ist ein EA</a>
+        <a href="./index.html#broker">Partner Broker</a>
+    
+      <div class="mobile-lang">
+        <a href="./en/">EN</a>
+        <span style="color:var(--text-3);">|</span>
+        <a href="#" style="color:var(--green);">DE</a>
+      </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">All Algorithms</span>
+    <h1>Pick the right EA for <span class="text-gradient">your market</span></h1>
+    <p>Three battle-tested MT5 strategies. Each one engineered for a specific market condition — pick the one that matches your trading view, or run all three.</p>
+  </div>
+</section>
+
+<!-- EA GRID -->
+<section class="ea-grid-section">
+  <div class="container">
+    <div class="ea-grid">
+
+      <div class="ea-card range">
+        <div class="ea-card-img">
+          <img src="./imgs/ea-box-3d.png" alt="Pivot Point EA" onerror="this.style.display='none'">
+        </div>
+        <span class="market-badge range">↔️ Range · Sideways</span>
+        <div class="ea-sub">MetaTrader 5 · Mean Reversion</div>
+        <h3>Pivot Point EA</h3>
+        <p>Detects institutional R1/R2/S1/S2 pivot levels and executes mean-reversion trades with strict TP1/TP2/SL discipline.</p>
+        <ul>
+          <li>Auto-detects daily &amp; weekly pivots</li>
+          <li>TP1 + TP2 partial close logic</li>
+          <li>EUR/USD, GBP/JPY, XAU/USD</li>
+          <li>News filter + trading hours control</li>
+        </ul>
+        <a href="./index.html" class="btn btn-primary ea-link">Get via Broker →</a>
+      </div>
+
+      <div class="ea-card breakout">
+        <div class="ea-card-img">
+          <img src="./imgs/ea-breakout.png" alt="Breakout EA" onerror="this.style.display='none'">
+        </div>
+        <span class="market-badge breakout">💥 Breakout · News</span>
+        <div class="ea-sub">MetaTrader 5 · Breakout Trading</div>
+        <h3>Breakout EA</h3>
+        <p>Identifies high-probability range breakouts with volume confirmation, enters on the retest, and rides momentum.</p>
+        <ul>
+          <li>Range detection across 6 timeframes</li>
+          <li>Volume filter for valid breakouts</li>
+          <li>Auto retest-entry logic</li>
+          <li>Trailing stop + breakeven management</li>
+        </ul>
+        <a href="./index.html" class="btn btn-primary ea-link">Get via Broker →</a>
+      </div>
+
+      <div class="ea-card trend">
+        <div class="ea-card-img">
+          <img src="./imgs/ea-trendfolge.png" alt="Trendfolge EA" onerror="this.style.display='none'">
+        </div>
+        <span class="market-badge trend">📈 Trending · Directional</span>
+        <div class="ea-sub">MetaTrader 5 · Trend Following</div>
+        <h3>Trendfolge EA</h3>
+        <p>Multi-timeframe trend detection with pullback entries. Locks in profits with dynamic trailing stops and trend exhaustion exits.</p>
+        <ul>
+          <li>HTF trend + LTF pullback entry</li>
+          <li>Dynamic SL that follows structure</li>
+          <li>Trend exhaustion exit logic</li>
+          <li>Multi-pair: 12+ instruments</li>
+        </ul>
+        <a href="./index.html" class="btn btn-primary ea-link">Get via Broker →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="./index.html" class="logo">
+          <span class="logo-mark">
+            <img src="./imgs/logo.png" alt="Pivot-Signal Logo" onerror="this.style.display='none'">
+          </span>
+          <span>Pivot<em>Signal</em></span>
+        </a>
+        <p>Algorithmic pivot point trading signals + MT5 Expert Advisor. MyFXBook verified. Real results, no hype.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="./index.html#signals">Free Telegram Signals</a></li>
+          <li><a href="./all-eas.html">All Expert Advisors</a></li>
+          <li><a href="./custom-ea.html">Custom EA Development</a></li>
+          <li><a href="./expert-advisor.html">What is an EA?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./index.html#faq">FAQ</a></li>
+          <li><a href="./expert-advisor.html#install-mt5">MT5 Install Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://t.me/pivotsignal" target="_blank" rel="noopener">Telegram Channel</a></li>
+          <li><a href="mailto:dev@pivotsignal.com">dev@pivotsignal.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pivot-Signal. All rights reserved.</div>
+      <div>Real results, no hype.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+    document.getElementById('mobile-overlay').classList.toggle('open');
+  }
+</script>
+</body>
+</html>

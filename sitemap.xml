@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Root: language switcher -->
+  <url>
+    <loc>https://pivotsignal.com/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pivotsignal.com/" />
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://pivotsignal.com/en/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/en/all-eas.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/en/custom-ea.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/en/expert-advisor.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/en/about.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://pivotsignal.com/de/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/de/all-eas.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/de/custom-ea.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/de/expert-advisor.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pivotsignal.com/de/about.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

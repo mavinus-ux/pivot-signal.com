@@ -1,0 +1,8 @@
+# Pretty URL redirects
+/all-eas        /en/all-eas.html        301
+/custom-ea      /en/custom-ea.html      301
+/expert-advisor /en/expert-advisor.html 301
+/about          /en/about.html          301
+
+# Force HTTPS
+http://pivotsignal.com/*  https://pivotsignal.com/:splat  301!

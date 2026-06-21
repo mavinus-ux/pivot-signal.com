@@ -1,0 +1,11 @@
+# Pivot-Signal Robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /test-all.html
+
+# Sitemap
+Sitemap: https://pivotsignal.com/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1
