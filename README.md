@@ -1,68 +1,95 @@
-﻿# Pivot-Signal Landing Page
+﻿# Pivot-Signal.com
 
-Professional trading software, signals & Expert Advisors landing page.
+Landing page for Pivot-Signal — algorithmic pivot point trading signals + MT5 Expert Advisor.
 
-🌐 **Live:** https://pivotsignal.com
+**Live:** https://pivot-signal.com
 
 ## Stack
 
-- Pure HTML/CSS/JavaScript (no build process)
-- Hosted on Netlify with continuous deployment from GitHub
-- Custom domain: pivotsignal.com
-- SSL via Let's Encrypt (auto-provisioned by Netlify)
+- Plain HTML / CSS / JavaScript
+- No build step
+- Static site, deployed on Netlify
+- Bilingual: English (`/en/`) + German (`/de/`)
 
-## Structure
+## Local development
+
+Just open `index.html` in a browser. The root redirects to `/en/`.
+
+For local URL previews:
+
+```bash
+# from repo root
+python -m http.server 8000
+# then visit http://localhost:8000
+```
+
+## Project structure
 
 ```
-pivot-signal-landing/
-├── index.html              ← Root (redirects to /en/)
-├── en/                     ← English pages
-│   ├── index.html          ← Main landing page
-│   ├── all-eas.html        ← All Expert Advisors comparison
-│   ├── custom-ea.html      ← Custom EA development
-│   ├── expert-advisor.html ← What is an EA + installation
-│   └── about.html          ← About page
-├── de/                     ← German pages (same structure)
-├── imgs/                   ← All images (logos, badges, OG image)
-├── netlify.toml            ← Netlify configuration
-├── _redirects              ← URL redirects
-├── _headers                ← Security headers
-├── robots.txt              ← SEO
-└── sitemap.xml             ← SEO
+/
+├── index.html                  # language switcher / EN default
+├── en/
+│   ├── index.html              # EN landing
+│   ├── expert-advisor.html
+│   ├── custom-ea.html
+│   ├── all-eas.html
+│   ├── about.html
+│   ├── impressum.html          # EN legal notice
+│   └── privacy.html            # EN privacy policy
+├── de/
+│   ├── index.html              # DE landing
+│   ├── expert-advisor.html
+│   ├── custom-ea.html
+│   ├── all-eas.html
+│   ├── about.html
+│   ├── impressum.html          # DE Impressum (§5 TMG)
+│   └── datenschutz.html        # DE Datenschutzerklärung (DSGVO)
+├── imgs/                       # shared image assets
+├── en/imgs/                    # EN-specific images
+├── de/imgs/                    # DE-specific images
+├── netlify.toml                # Netlify config
+├── _redirects                  # URL redirects
+├── _headers                    # Cache / security headers
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Deployment
 
-Auto-deploy on push to `main` branch:
+The site auto-deploys to Netlify on every push to `main`:
 
-1. Push to GitHub: `git push origin main`
-2. Netlify auto-builds + deploys
-3. Live in ~30 seconds at pivotsignal.com
+- Push to `main` → Netlify build runs (no build step, just serves files) → live at `pivot-signal.com`
 
-## Local Development
+## Editing legal pages
 
-```bash
-# Just open the files directly
-open en/index.html
+The legal pages (`impressum.html`, `datenschutz.html`, `privacy.html`) currently contain a placeholder email address. Before going live in production, replace:
 
-# Or run a local server
-python3 -m http.server 8000
-# Visit http://localhost:8000/en/
+```
+kontakt@pivot-signal.com
 ```
 
-## Languages
+with the real business contact email in:
 
-- `/en/` — English (default)
-- `/de/` — German
+- `de/impressum.html`
+- `de/datenschutz.html`
+- `en/impressum.html`
+- `en/privacy.html`
 
-The root `/` redirects to `/en/`.
+## Adding a new page
 
-## Adding Languages
+1. Create the HTML in both `en/` and `de/`
+2. Add a `<url>` entry to `sitemap.xml`
+3. (Optional) Add a redirect rule in `_redirects`
+4. Link from the footer / relevant sections
 
-1. Create `/[lang]/` directory with same structure as `/en/`
-2. Update `netlify.toml` redirects if needed
-3. Update `sitemap.xml` to include new language URLs
+## Brand
+
+- **Orange:** `#FF6B1A`
+- **Mint-Celadon:** `#88D8C0`
+- **Headline gradient:** teal → mint → orange
+
+Do not change brand colors without consulting the owner.
 
 ## License
 
-© 2026 Pivot-Signal. All rights reserved.
+Proprietary — all rights reserved.

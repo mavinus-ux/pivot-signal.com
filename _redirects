@@ -1,8 +1,13 @@
 # Pretty URL redirects
-/all-eas        /en/all-eas.html        301
-/custom-ea      /en/custom-ea.html      301
-/expert-advisor /en/expert-advisor.html 301
-/about          /en/about.html          301
+/all-eas         /en/all-eas.html         301
+/custom-ea       /en/custom-ea.html       301
+/expert-advisor  /en/expert-advisor.html  301
+/about           /en/about.html           301
+
+# Legal pages (pretty URLs)
+/impressum       /de/impressum.html       301
+/datenschutz     /de/datenschutz.html     301
+/privacy         /en/privacy.html         301
 
 # Force HTTPS
-http://pivotsignal.com/*  https://pivotsignal.com/:splat  301!
+http://pivot-signal.com/*  https://pivot-signal.com/:splat  301!

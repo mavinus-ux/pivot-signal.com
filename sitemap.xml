@@ -4,81 +4,113 @@
 
   <!-- Root: language switcher -->
   <url>
-    <loc>https://pivotsignal.com/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pivotsignal.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/" />
   </url>
 
   <!-- English -->
   <url>
-    <loc>https://pivotsignal.com/en/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/en/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/" />
   </url>
   <url>
-    <loc>https://pivotsignal.com/en/all-eas.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/en/all-eas.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/en/custom-ea.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/en/custom-ea.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/en/expert-advisor.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/en/expert-advisor.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/en/about.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/en/about.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pivot-signal.com/en/impressum.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/impressum.html" />
+  </url>
+  <url>
+    <loc>https://pivot-signal.com/en/privacy.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/datenschutz.html" />
   </url>
 
   <!-- German -->
   <url>
-    <loc>https://pivotsignal.com/de/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/de/</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pivotsignal.com/de/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://pivotsignal.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/" />
   </url>
   <url>
-    <loc>https://pivotsignal.com/de/all-eas.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/de/all-eas.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/de/custom-ea.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/de/custom-ea.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/de/expert-advisor.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/de/expert-advisor.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pivotsignal.com/de/about.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://pivot-signal.com/de/about.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pivot-signal.com/de/impressum.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/impressum.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/impressum.html" />
+  </url>
+  <url>
+    <loc>https://pivot-signal.com/de/datenschutz.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/privacy.html" />
   </url>
 
 </urlset>
