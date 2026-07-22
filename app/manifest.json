@@ -1,0 +1,13 @@
+{
+  "name": "Pivot-Signal",
+  "short_name": "Pivot",
+  "start_url": "/app/",
+  "display": "standalone",
+  "background_color": "#0A0A12",
+  "theme_color": "#0A0A12",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/app/favicon.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/app/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
