@@ -8,6 +8,8 @@
 /impressum       /de/impressum.html       301
 /datenschutz     /de/datenschutz.html     301
 /privacy         /en/privacy.html         301
+/fr              /fr/                     301
+/es              /es/                     301
 
 # Force HTTPS
 http://pivot-signal.com/*  https://pivot-signal.com/:splat  301!

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pivot-Signal — Kostenloser MT5 Expert Advisor + Telegram Trading Signale</title>
-<meta name="description" content="Kostenloser MetaTrader 5 Pivot Point Expert Advisor + tägliche Telegram Signale. MyFXBook verifiziert. Mit Partner-Broker-Konto sichern." />
+<title>Pivot-Signal — Kostenloser MT5 Expert Advisor + Telegram Trading-Signale</title>
+<meta name="description" content="Holen Sie sich unseren MetaTrader 5 Pivot Point Expert Advisor KOSTENLOS plus tägliche Telegram-Signale. MyFXBook verifiziert. Melden Sie sich bei unserem Partner-Broker an, um Ihre Lizenz zu erhalten." />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pivot-signal.com/de/" />
   <meta property="og:title" content="Pivot-Signal — Professionelle Trading-Software, Signale & Expert Advisors" />
-  <meta property="og:description" content="Erhalte unseren MT5 Expert Advisor + tägliche Telegram-Signale — kostenlos mit Partner-Broker. MyFXBook verifiziert. EUR/USD, GBP/JPY, XAU/USD automatisiert." />
+  <meta property="og:description" content="Holen Sie sich unseren MT5 Expert Advisor + tägliche Telegram-Signale — kostenlos über Partner-Broker. MyFXBook verifiziert. EUR/USD, GBP/JPY, XAU/USD automatisiertes Trading." />
   <meta property="og:image" content="https://pivot-signal.com/imgs/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://pivot-signal.com/de/" />
   <meta name="twitter:title" content="Pivot-Signal — Professionelle Trading-Software, Signale & Expert Advisors" />
-  <meta name="twitter:description" content="Erhalte unseren MT5 Expert Advisor + tägliche Telegram-Signale — kostenlos mit Partner-Broker. MyFXBook verifiziert. EUR/USD, GBP/JPY, XAU/USD automatisiert." />
+  <meta name="twitter:description" content="Holen Sie sich unseren MT5 Expert Advisor + tägliche Telegram-Signale — kostenlos über Partner-Broker. MyFXBook verifiziert. EUR/USD, GBP/JPY, XAU/USD automatisiertes Trading." />
   <meta name="twitter:image" content="https://pivot-signal.com/imgs/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1495,50 +1495,97 @@
   }
   
   /* ==========================================================
-     Flag-based Language Switch
+     Language Switch Dropdown (single flag → open to choose)
      ========================================================== */
   .lang-switch {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+  }
+  .lang-switch > summary {
+    list-style: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-left: 8px;
-    padding: 4px;
+    gap: 4px;
+    width: 38px;
+    height: 24px;
+    padding: 0 4px;
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: 100px;
-  }
-  .lang-flag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 20px;
-    border-radius: 4px;
-    overflow: hidden;
-    opacity: 0.5;
+    cursor: pointer;
     transition: all .2s;
-    border: 1.5px solid transparent;
   }
-  .lang-flag:hover { opacity: 0.8; }
-  .lang-flag.active {
-    opacity: 1;
+  .lang-switch > summary:hover {
     border-color: var(--green);
-    background: rgba(0, 200, 100, 0.08);
+    background: rgba(45, 212, 191, 0.06);
   }
-  .lang-flag .flag-svg {
-    width: 100%;
-    height: 100%;
+  .lang-switch > summary::-webkit-details-marker { display: none; }
+  .lang-switch > summary::marker { display: none; content: ''; }
+  .lang-switch .lang-current .flag-svg {
+    width: 26px;
+    height: 18px;
+    border-radius: 3px;
     object-fit: cover;
-    border-radius: 2px;
   }
-  .mobile-menu .lang-flag {
-    width: 36px;
-    height: 28px;
+  .lang-switch .lang-caret {
+    font-size: 10px;
+    color: var(--text-3);
+    margin-left: 2px;
+  }
+  .lang-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: var(--bg-elev, #1a1a24);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    min-width: 150px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+  .lang-item { margin: 0; padding: 0; }
+  .lang-flag-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
     border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-2);
+    font-size: 13px;
+    font-weight: 500;
+    transition: background .15s;
   }
-  
+  .lang-flag-item:hover {
+    background: rgba(45, 212, 191, 0.08);
+    color: var(--text-1, #fff);
+  }
+  .lang-item.current .lang-flag-item {
+    color: var(--green);
+    cursor: default;
+  }
+  .lang-flag-item .flag-svg {
+    width: 22px;
+    height: 15px;
+    border-radius: 2px;
+    object-fit: cover;
+  }
+  .lang-name {
+    white-space: nowrap;
+  }
+  .mobile-menu .lang-switch > summary {
+    width: 44px;
+    height: 28px;
+  }
+  .mobile-menu .lang-dropdown {
+    right: auto;
+    left: 0;
+  }
 
-  
   /* Hide header CTAs (now removed) */
   .header-cta { display: none; }
 
@@ -1652,11 +1699,41 @@
       <a href="#broker">Partner Broker</a>
       <a href="#faq">FAQ</a>
       <a href="./about.html">Über uns</a>
-      <div class="lang-switch" style="display:inline-flex; gap:6px; margin-left:8px; padding:4px 8px; background:var(--bg-elev); border:1px solid var(--border); border-radius:8px; font-size:12px;">
-        <a href="../en/" style="color:var(--text-2);">EN</a>
-        <span style="color:var(--text-3);">|</span>
-        <a href="../de/" style="color:var(--green); font-weight:700;">DE</a>
-      </div>
+      <details class="lang-switch">
+        <summary class="lang-current" title="Deutsch" aria-label="Deutsch"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Deutsch">
+        <rect width="30" height="6.67" y="0" fill="#000"/>
+        <rect width="30" height="6.67" y="6.67" fill="#DD0000"/>
+        <rect width="30" height="6.66" y="13.33" fill="#FFCE00"/>
+      </svg><span class="lang-caret">▾</span></summary>
+        <ul class="lang-dropdown">
+        <li class="lang-item"><a href="../en/" class="lang-flag-item" title="English" aria-label="English"><svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" aria-label="English">
+        <clipPath id="t-en"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+        <clipPath id="s-en"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+        <g clip-path="url(#t-en)">
+          <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#s-en)" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+        </g>
+      </svg><span class="lang-name">English</span></a></li>
+        <li class="lang-item current"><span class="lang-flag-item"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Deutsch">
+        <rect width="30" height="6.67" y="0" fill="#000"/>
+        <rect width="30" height="6.67" y="6.67" fill="#DD0000"/>
+        <rect width="30" height="6.66" y="13.33" fill="#FFCE00"/>
+      </svg><span class="lang-name">Deutsch</span></span></li>
+        <li class="lang-item"><a href="../fr/" class="lang-flag-item" title="Français" aria-label="Français"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Français">
+        <rect width="10" height="20" x="0" fill="#0055A4"/>
+        <rect width="10" height="20" x="10" fill="#FFFFFF"/>
+        <rect width="10" height="20" x="20" fill="#EF4135"/>
+      </svg><span class="lang-name">Français</span></a></li>
+        <li class="lang-item"><a href="../es/" class="lang-flag-item" title="Español" aria-label="Español"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Español">
+        <rect width="30" height="5" y="0" fill="#AA151B"/>
+        <rect width="30" height="10" y="5" fill="#F1BF00"/>
+        <rect width="30" height="5" y="15" fill="#AA151B"/>
+      </svg><span class="lang-name">Español</span></a></li>
+        </ul>
+      </details>
     </nav>
 
   </div>
@@ -1677,11 +1754,33 @@
         <a href="./about.html">Über uns</a>
     
       <div class="mobile-lang">
-        <a href="./en/">EN</a>
-        <span style="color:var(--text-3);">|</span>
-        <a href="#" style="color:var(--green);">DE</a>
-      </div>
-  </div>
+        <a href="../en/" class="lang-flag" title="EN" aria-label="EN"><svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" aria-label="English">
+        <clipPath id="t"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+        <clipPath id="s"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+        <g clip-path="url(#t)">
+          <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#s)" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+        </g>
+      </svg></a>
+        <a href="./" class="lang-flag active" title="DE" aria-label="DE"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Deutsch">
+        <rect width="30" height="6.67" y="0" fill="#000"/>
+        <rect width="30" height="6.67" y="6.67" fill="#DD0000"/>
+        <rect width="30" height="6.66" y="13.33" fill="#FFCE00"/>
+      </svg></a>
+        <a href="../fr/" class="lang-flag" title="FR" aria-label="FR"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Français">
+        <rect width="10" height="20" x="0" fill="#0055A4"/>
+        <rect width="10" height="20" x="10" fill="#FFFFFF"/>
+        <rect width="10" height="20" x="20" fill="#EF4135"/>
+      </svg></a>
+        <a href="../es/" class="lang-flag" title="ES" aria-label="ES"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Español">
+        <rect width="30" height="5" y="0" fill="#AA151B"/>
+        <rect width="30" height="10" y="5" fill="#F1BF00"/>
+        <rect width="30" height="5" y="15" fill="#AA151B"/>
+      </svg></a>
+      </div>  </div>
 </header>
 
 <!-- =========================================================

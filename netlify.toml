@@ -30,6 +30,16 @@
   to = "/en/about.html"
   status = 301
 
+[[redirects]]
+  from = "/fr"
+  to = "/fr/"
+  status = 301
+
+[[redirects]]
+  from = "/es"
+  to = "/es/"
+  status = 301
+
 # Security & Performance headers
 [[headers]]
   for = "/*"
