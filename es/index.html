@@ -229,6 +229,62 @@
   }
   .hero h1 .accent-orange { color: var(--orange); }
   .hero h1 .accent-green { color: var(--green); }
+  /* ==========================================================
+     Hero Split (Two ways to use it)
+     ========================================================== */
+  .hero-split {
+    margin: 24px 0 20px;
+    padding: 18px 22px;
+    background: rgba(45, 212, 191, 0.06);
+    border-left: 3px solid var(--green);
+    border-radius: 0 10px 10px 0;
+  }
+  .hero-split-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-1);
+    margin: 0 0 6px 0;
+    line-height: 1.25;
+  }
+  .hero-split-body {
+    font-size: 15px;
+    color: var(--text-2);
+    margin: 0;
+    line-height: 1.45;
+  }
+  
+  /* ==========================================================
+     Hero Trust Badge
+     ========================================================== */
+  .hero-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 8px 14px;
+    background: rgba(45, 212, 191, 0.08);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    border-radius: 999px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    width: fit-content;
+  }
+  .hero-trust-badge .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
   .hero p.lead {
     font-size: 18px; color: var(--text-2);
     max-width: 560px; margin: 0 0 36px;
@@ -1876,14 +1932,22 @@
   <div class="hero-bg"></div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="hero-eyebrow"><span class="dot"></span> MT5 EXPERT ADVISOR · LIVE 24/5</span>
-      <h1>Software de Trading <span class="accent-orange">Profesional</span></h1>
-      <p class="hero-tagline"><strong>Señales de Trading &amp; Expert Advisors</strong> — automatizado, verificado y listo para instalar en minutos.</p>
-      <p class="lead">Algoritmos MetaTrader 5 + señales diarias de Telegram. <strong style="color:#fff">Gratis</strong> con nuestro broker asociado. Verificado por MyFXBook.</p>
+      <h1>Opere Como las Instituciones.</h1>
+      <p class="hero-tagline">Algoritmos de nivel pivote, para forex, oro e índices.</p>
+      <div class="hero-split">
+        <p class="hero-split-title">Un sistema. Dos formas de usarlo.</p>
+        <p class="hero-split-body">Ejecútalo tú mismo con el EA, o sigue las llamadas vía la app.</p>
+      </div>
       <div class="hero-ctas">
-        <a href="#broker" class="btn btn-primary" style="background: var(--orange); color: #000; padding: 10px 20px; font-size: 14px; font-weight: 600; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; width: fit-content;">
-          Empezar Gratis <span style="font-size: 16px;">→</span>
+        <a href="#broker" class="btn btn-primary" style="padding: 12px 22px; font-size: 14px; font-weight: 600;">
+          Obtener el EA <span style="font-size: 16px;">→</span>
         </a>
+        <a href="/app/" class="btn btn-secondary" style="padding: 12px 22px; font-size: 14px; font-weight: 600;">
+          Obtener Señales <span style="font-size: 16px;">→</span>
+        </a>
+      </div>
+      <div class="hero-trust-badge">
+        <span class="dot"></span> Verificado por MyFXBook · En Vivo 24/5
       </div>
     </div>
     

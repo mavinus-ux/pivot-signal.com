@@ -229,6 +229,62 @@
   }
   .hero h1 .accent-orange { color: var(--orange); }
   .hero h1 .accent-green { color: var(--green); }
+  /* ==========================================================
+     Hero Split (Two ways to use it)
+     ========================================================== */
+  .hero-split {
+    margin: 24px 0 20px;
+    padding: 18px 22px;
+    background: rgba(45, 212, 191, 0.06);
+    border-left: 3px solid var(--green);
+    border-radius: 0 10px 10px 0;
+  }
+  .hero-split-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-1);
+    margin: 0 0 6px 0;
+    line-height: 1.25;
+  }
+  .hero-split-body {
+    font-size: 15px;
+    color: var(--text-2);
+    margin: 0;
+    line-height: 1.45;
+  }
+  
+  /* ==========================================================
+     Hero Trust Badge
+     ========================================================== */
+  .hero-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 8px 14px;
+    background: rgba(45, 212, 191, 0.08);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    border-radius: 999px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    width: fit-content;
+  }
+  .hero-trust-badge .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
   .hero p.lead {
     font-size: 18px; color: var(--text-2);
     max-width: 560px; margin: 0 0 36px;
@@ -1876,14 +1932,22 @@
   <div class="hero-bg"></div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="hero-eyebrow"><span class="dot"></span> MT5 EXPERT ADVISOR · LIVE 24/5</span>
-      <h1>Logiciel de Trading <span class="accent-orange">Professionnel</span></h1>
-      <p class="hero-tagline"><strong>Signaux de Trading &amp; Expert Advisors</strong> — automatisé, vérifié et prêt à installer en quelques minutes.</p>
-      <p class="lead">Algorithmes MetaTrader 5 + signaux Telegram quotidiens. <strong style="color:#fff">Gratuit</strong> avec notre broker partenaire. Vérifié par MyFXBook.</p>
+      <h1>Tradez Comme les Institutions.</h1>
+      <p class="hero-tagline">Algorithmes de niveau pivot, pour le forex, l&#039;or et les indices.</p>
+      <div class="hero-split">
+        <p class="hero-split-title">Un système. Deux façons de l&#039;utiliser.</p>
+        <p class="hero-split-body">Exécutez-le vous-même avec l&#039;EA, ou suivez les appels via l&#039;app.</p>
+      </div>
       <div class="hero-ctas">
-        <a href="#broker" class="btn btn-primary" style="background: var(--orange); color: #000; padding: 10px 20px; font-size: 14px; font-weight: 600; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; width: fit-content;">
-          Commencer Gratuitement <span style="font-size: 16px;">→</span>
+        <a href="#broker" class="btn btn-primary" style="padding: 12px 22px; font-size: 14px; font-weight: 600;">
+          Obtenir l&#039;EA <span style="font-size: 16px;">→</span>
         </a>
+        <a href="/app/" class="btn btn-secondary" style="padding: 12px 22px; font-size: 14px; font-weight: 600;">
+          Obtenir les Signaux <span style="font-size: 16px;">→</span>
+        </a>
+      </div>
+      <div class="hero-trust-badge">
+        <span class="dot"></span> Vérifié par MyFXBook · En Direct 24/5
       </div>
     </div>
     
@@ -1900,10 +1964,10 @@
           <!-- populated by JS -->
         </div>
         <div class="signal-card-footer">
-          <span>Mis à jour <strong id="signalTime">à l\'instant</strong></span>
+          <span>Mis à jour <strong id="signalTime">à l&#039;instant</strong></span>
           <div class="footer-stats">
             <span>Taux de réussite <strong>72%</strong></span>
-            <span>Signaux aujourd\'hui <strong>14</strong></span>
+            <span>Signaux aujourd&#039;hui <strong>14</strong></span>
           </div>
         </div>
       </div>
@@ -2006,7 +2070,7 @@
         <div class="step-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
         </div>
-        <h3>Activer l\'EA</h3>
+        <h3>Activer l&#039;EA</h3>
         <p>Choisissez votre Expert Advisor et commencez le trading automatisé immédiatement.</p>
         <a href="./expert-advisor.html#install-mt5" class="step-guide-link">Comment installer →</a>
       </div>
@@ -2030,19 +2094,19 @@
     <div class="faq">
       <div class="faq-item">
         <button class="faq-q">Qu&#039;est-ce qu&#039;un Expert Advisor (EA) ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a"><div style="padding-top:6px;">Un Expert Advisor (EA) est un programme de trading automatisé qui fonctionne sur la plateforme MetaTrader 5. Il utilise des règles de trading préprogrammées, des indicateurs techniques et des algorithmes pour identifier les configurations et exécuter des trades en votre nom — sans intervention manuelle. Nos EAs (Pivot Point, Breakout, Trendfolge) couvrent les trois stratégies de trading principales : retour à la moyenne aux niveaux pivots, détection de cassures de range, et suivi de tendance multi-unité de temps. Une fois installé, vous pouvez le configurer et oublier — l\'EA scanne les marchés 24/5, identifie les configurations à haute probabilité, gère les entrées, définit les niveaux de stop-loss et take-profit, et sort des trades selon des règles strictes et backtestées. Vous gardez le contrôle total des paramètres de risque.</div></div>
+        <div class="faq-a"><div style="padding-top:6px;">Un Expert Advisor (EA) est un programme de trading automatisé qui fonctionne sur la plateforme MetaTrader 5. Il utilise des règles de trading préprogrammées, des indicateurs techniques et des algorithmes pour identifier les configurations et exécuter des trades en votre nom — sans intervention manuelle. Nos EAs (Pivot Point, Breakout, Trendfolge) couvrent les trois stratégies de trading principales : retour à la moyenne aux niveaux pivots, détection de cassures de range, et suivi de tendance multi-unité de temps. Une fois installé, vous pouvez le configurer et oublier — l&#039;EA scanne les marchés 24/5, identifie les configurations à haute probabilité, gère les entrées, définit les niveaux de stop-loss et take-profit, et sort des trades selon des règles strictes et backtestées. Vous gardez le contrôle total des paramètres de risque.</div></div>
       </div>
 <div class="faq-item">
         <button class="faq-q">Ai-je besoin d&#039;expérience en trading ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a"><div style="padding-top:6px;">Non. L\'EA est entièrement automatisé — vous l\'installez, définissez votre niveau de risque, et le laissez tourner. Nous fournissons également des guides d\'installation et le canal Telegram pour un support continu. Les débutants sont les bienvenus.</div></div>
+        <div class="faq-a"><div style="padding-top:6px;">Non. L&#039;EA est entièrement automatisé — vous l&#039;installez, définissez votre niveau de risque, et le laissez tourner. Nous fournissons également des guides d&#039;installation et le canal Telegram pour un support continu. Les débutants sont les bienvenus.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Quel broker dois-je utiliser ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a"><div style="padding-top:6px;">Nous travaillons avec un broker partenaire régulé (Tier-1, fonds clients ségrégés, multiples licences). L\'EA fonctionne sur tout compte MT5, mais pour recevoir la licence gratuite, vous devez approvisionner un nouveau compte chez ce broker. Le dépôt minimum est de 100$.</div></div>
+        <div class="faq-a"><div style="padding-top:6px;">Nous travaillons avec un broker partenaire régulé (Tier-1, fonds clients ségrégés, multiples licences). L&#039;EA fonctionne sur tout compte MT5, mais pour recevoir la licence gratuite, vous devez approvisionner un nouveau compte chez ce broker. Le dépôt minimum est de 100$.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Puis-je tester l&#039;EA avant d&#039;acheter ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a"><div style="padding-top:6px;">Oui — 100% sans risque. Chaque EA est livré avec une licence demo gratuite pour les comptes demo MT5, vous pouvez donc le tester en conditions de marché réelles sans risquer un seul euro. Nous recommandons de faire tourner le demo pendant au moins 2 à 4 semaines pour voir comment l\'EA se comporte dans différentes conditions de marché (tendance, range, volatilité). De plus, tous nos EAs ont des comptes MyFXBook vérifiés montrant les performances en argent réel — pas seulement les résultats de backtest. Lancez-le d\'abord en demo pendant 2 à 4 semaines avant de passer en réel.</div></div>
+        <div class="faq-a"><div style="padding-top:6px;">Oui — 100% sans risque. Chaque EA est livré avec une licence demo gratuite pour les comptes demo MT5, vous pouvez donc le tester en conditions de marché réelles sans risquer un seul euro. Nous recommandons de faire tourner le demo pendant au moins 2 à 4 semaines pour voir comment l&#039;EA se comporte dans différentes conditions de marché (tendance, range, volatilité). De plus, tous nos EAs ont des comptes MyFXBook vérifiés montrant les performances en argent réel — pas seulement les résultats de backtest. Lancez-le d&#039;abord en demo pendant 2 à 4 semaines avant de passer en réel.</div></div>
       </div>
 <div class="faq-item">
         <button class="faq-q">Y a-t-il des coûts cachés ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
@@ -2050,7 +2114,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Comment installer l&#039;EA dans MT5 ? <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a"><div style="padding-top:6px;">L\'installation prend environ 5 minutes : téléchargez le fichier .ex5 → ouvrez le dossier de données MT5 → collez dans MQL5/Experts → redémarrez MT5 → activez le trading automatique → glissez l\'EA sur votre graphique. <a href="./expert-advisor.html#install-mt5">Voir le guide étape par étape avec captures d\'écran →</a></div></div>
+        <div class="faq-a"><div style="padding-top:6px;">L&#039;installation prend environ 5 minutes : téléchargez le fichier .ex5 → ouvrez le dossier de données MT5 → collez dans MQL5/Experts → redémarrez MT5 → activez le trading automatique → glissez l&#039;EA sur votre graphique. <a href="./expert-advisor.html#install-mt5">Voir le guide étape par étape avec captures d&#039;écran →</a></div></div>
       </div>
     </div>
   </div>
@@ -2079,7 +2143,7 @@
     <div>
       <span class="section-eyebrow">Gratuit avec le Broker Partenaire</span>
       <h2 class="section-title">Votre licence est <span class="text-gradient">100% gratuite</span> quand vous tradez avec notre partenaire.</h2>
-      <p class="section-subtitle">Nous nous associons à un broker régulé de premier plan pour que vous obteniez l\'EA + signaux sans payer un cent à l\'avance. Même broker, meilleures conditions.</p>
+      <p class="section-subtitle">Nous nous associons à un broker régulé de premier plan pour que vous obteniez l&#039;EA + signaux sans payer un cent à l&#039;avance. Même broker, meilleures conditions.</p>
       <ul class="broker-benefits">
         <li>
           <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -2122,7 +2186,7 @@
       <h3>Réclamez Votre Licence Gratuite</h3>
       <p>Open a trading account with our partner broker and we'll send your Pivot Point EA license + Telegram VIP invite within 24 hours.</p>
       <a href="https://your-affiliate-link.com" class="btn btn-primary btn-lg" style="width:100%">Ouvrir un Compte Broker Gratuit</a>
-      <p class="small">Aucun dépôt requis pour commencer. Minimum 100$ pour activer l\'EA.</p>
+      <p class="small">Aucun dépôt requis pour commencer. Minimum 100$ pour activer l&#039;EA.</p>
     </div>
   </div>
 </section>
@@ -2171,7 +2235,7 @@
         <ul>
           <li><a href="#signals">Free Telegram Signals</a></li>
           <li><a href="../en/all-eas.html">Tous les EAs</a></li>
-          <li><a href="../en/expert-advisor.html#install-mt5">Guide d\'Installation</a></li>
+          <li><a href="../en/expert-advisor.html#install-mt5">Guide d&#039;Installation</a></li>
           <li><a href="#broker">Broker Partenaire</a></li>
           <li><a href="#results">MyFXBook Results</a></li>
         </ul>
@@ -2261,7 +2325,7 @@
     const isGerman = document.documentElement.lang === 'de' || window.location.pathname.includes('/de/');
     const labels = isGerman
       ? { updated: 'Aktualisiert', just: 'gerade eben', min: 'Min', ago: 'vor' }
-      : { updated: 'Mis à jour', just: 'à l\'instant', min: 'min', ago: 'il y a' };
+      : { updated: 'Mis à jour', just: 'à l&#039;instant', min: 'min', ago: 'il y a' };
     
     function formatPnl(s) {
       const cls = s.action === 'BUY' ? 'pos' : 'neg';
