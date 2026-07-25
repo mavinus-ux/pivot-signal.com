@@ -230,6 +230,17 @@
   .hero h1 .accent-orange { color: var(--orange); }
   .hero h1 .accent-green { color: var(--green); }
   /* ==========================================================
+     Hero H1 Gradient (white → green → orange)
+     ========================================================== */
+  .hero h1.gradient-shift {
+    background: linear-gradient(90deg, #ffffff 0%, #88D8C0 50%, #FF6B1A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ==========================================================
      Hero Split (Two ways to use it)
      ========================================================== */
   .hero-split {
@@ -1938,7 +1949,7 @@
   <div class="hero-bg"></div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <h1>Trade Like the Institutions Do.</h1>
+      <h1 class="gradient-shift">Trade Like the Institutions Do.</h1>
       <p class="hero-tagline">Pivot-level algorithms, for forex, gold &amp; indices.</p>
       <div class="hero-split">
         <p class="hero-split-title">One system. Two ways to use it.</p>
