@@ -1125,6 +1125,39 @@
   .faq-cta-box a { color: var(--green); font-weight: 600; text-decoration: none; }
   .faq-cta-box a:hover { text-decoration: underline; }
 
+  /* Footer email (under logo) */
+  .footer-brand .footer-email {
+    margin: 14px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .footer-brand .footer-email a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .footer-brand .footer-email a:hover {
+    text-decoration: underline;
+  }
+
+  /* FAQ static item (for email CTA, no toggle) */
+  .faq-item-static {
+    cursor: default;
+  }
+  .faq-q-static {
+    cursor: default;
+    padding: 16px 18px;
+    color: var(--text-2);
+  }
+  .faq-q-static a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  .faq-q-static a:hover {
+    text-decoration: underline;
+  }
+
   /* ==========================================================
      Disclaimer
      ========================================================== */
@@ -2145,8 +2178,10 @@
         <div class="faq-a"><div style="padding-top:6px;">Installation takes about 5 minutes: download the .ex5 file → open MT5 Data Folder → paste into MQL5/Experts → restart MT5 → enable AutoTrading → drag the EA onto your chart. <a href="./expert-advisor.html#install-mt5">See the full step-by-step guide with screenshots →</a></div></div>
       </div>
     </div>
-    <div class="faq-cta-box">
-      <p>Still have questions? <a href="mailto:support@pivot-signal.com">Email us at support@pivot-signal.com</a></p>
+    <div class="faq-item faq-item-static">
+      <div class="faq-q faq-q-static">
+        Still have questions? <a href="mailto:support@pivot-signal.com">Email us at support@pivot-signal.com</a>
+      </div>
     </div>
   </div>
 </section>
@@ -2259,7 +2294,7 @@
           </span>
           <span>Pivot<em>Signal</em></span>
         </a>
-        <p>Algorithmic pivot point trading signals + MT5 Expert Advisor. MyFXBook verified. Real results, no hype.</p>
+        <p class="footer-email"><a href="mailto:support@pivot-signal.com">support@pivot-signal.com</a></p>
       </div>
       <div>
         <h5>Product</h5>
@@ -2283,7 +2318,6 @@
         <h5>Connect</h5>
         <ul>
           <li><a href="https://t.me/pivotsignal" target="_blank" rel="noopener">Telegram Channel</a></li>
-          <li><a href="mailto:support@pivot-signal.com">support@pivot-signal.com</a></li>
           <li><a href="#">Twitter / X</a></li>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">YouTube</a></li>
