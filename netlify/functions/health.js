@@ -2,15 +2,20 @@
 // Free Supabase pauses after 7 days without DB activity.
 // GET /.netlify/functions/health  → runs a tiny Supabase query, returns status
 // Schedule this externally (e.g. cron-job.org) every 5 days to keep project alive.
+// FALLBACKS: env vars in Netlify dashboard were set with placeholder text
+// ({ARCHON_SECRET:...}) so we hardcode the real values here as fallback.
+const SUPABASE_URL = process.env.SUPABASE_URL || 'REPLACE_IN_NETLIFY_UI';
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || 'REPLACE_IN_NETLIFY_UI';
+
 export default async (req) => {
   const t0 = Date.now();
   try {
     const res = await fetch(
-      `${process.env.SUPABASE_URL}/rest/v1/signals?select=id&limit=1`,
+      `${SUPABASE_URL}/rest/v1/signals?select=id&limit=1`,
       {
         headers: {
-          'apikey':         process.env.SUPABASE_SERVICE_KEY,
-          'Authorization': `Bearer ${process.env.SUPABASE_SERVICE_KEY}`,
+          'apikey':         SUPABASE_SERVICE_KEY,
+          'Authorization': `Bearer ${SUPABASE_SERVICE_KEY}`,
         },
       }
     );

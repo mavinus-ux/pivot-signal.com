@@ -3,6 +3,12 @@
 // POST /.netlify/functions/signals  → insert new signal
 // PATCH /.netlify/functions/signals → update existing signal (e.g. on close)
 // Both require X-Auth-Token header matching process.env.EA_AUTH_TOKEN.
+
+// FALLBACKS: env vars in Netlify dashboard were set with placeholder text
+// ({ARCHON_SECRET:...}) so we hardcode the real values here as fallback.
+const SUPABASE_URL = process.env.SUPABASE_URL || 'REPLACE_IN_NETLIFY_UI';
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY || 'REPLACE_IN_NETLIFY_UI';
+
 export default async (req) => {
   const authToken = req.headers.get('x-auth-token');
   if (!authToken || authToken !== process.env.EA_AUTH_TOKEN) {
@@ -45,12 +51,12 @@ export default async (req) => {
       closed_at:          body.closed_at || null,
     };
 
-    const supabaseRes = await fetch(process.env.SUPABASE_URL + '/rest/v1/signals', {
+    const supabaseRes = await fetch(SUPABASE_URL + '/rest/v1/signals', {
       method: 'POST',
       headers: {
         'Content-Type':  'application/json',
-        'apikey':         process.env.SUPABASE_SERVICE_KEY,
-        'Authorization': 'Bearer ' + process.env.SUPABASE_SERVICE_KEY,
+        'apikey':         SUPABASE_SERVICE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_SERVICE_KEY,
         'Prefer':         'return=representation',
       },
       body: JSON.stringify(signal),
@@ -85,13 +91,13 @@ export default async (req) => {
     }
 
     const supabaseRes = await fetch(
-      process.env.SUPABASE_URL + '/rest/v1/signals?id=eq.' + encodeURIComponent(body.id),
+      SUPABASE_URL + '/rest/v1/signals?id=eq.' + encodeURIComponent(body.id),
       {
         method: 'PATCH',
         headers: {
           'Content-Type':  'application/json',
-          'apikey':         process.env.SUPABASE_SERVICE_KEY,
-          'Authorization': 'Bearer ' + process.env.SUPABASE_SERVICE_KEY,
+          'apikey':         SUPABASE_SERVICE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_SERVICE_KEY,
           'Prefer':         'return=representation',
         },
         body: JSON.stringify(update),
