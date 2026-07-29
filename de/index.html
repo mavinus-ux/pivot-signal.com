@@ -1125,6 +1125,21 @@
   .footer ul li { margin-bottom: 10px; }
   .footer ul a:hover { color: var(--green); }
   .footer-brand p { margin: 12px 0 0; line-height: 1.6; }
+
+  /* Footer email (under logo) */
+  .footer-brand .footer-email {
+    margin: 14px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .footer-brand .footer-email a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .footer-brand .footer-email a:hover {
+    text-decoration: underline;
+  }
+
   .footer-bottom {
     border-top: 1px solid var(--border);
     padding-top: 24px;
@@ -1562,10 +1577,10 @@
     list-style: none;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    width: 38px;
-    height: 24px;
-    padding: 0 4px;
+    gap: 5px;
+    width: 46px;
+    height: 30px;
+    padding: 0 6px;
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: 100px;
@@ -1579,8 +1594,8 @@
   .lang-switch > summary::-webkit-details-marker { display: none; }
   .lang-switch > summary::marker { display: none; content: ''; }
   .lang-switch .lang-current .flag-svg {
-    width: 26px;
-    height: 18px;
+    width: 32px;
+    height: 22px;
     border-radius: 3px;
     object-fit: cover;
   }
@@ -1749,11 +1764,9 @@
       <span>Pivot<em>Signal</em></span>
     </a>
     <nav class="nav">
-      <a href="#signals">Signale</a>
       <a href="./expert-advisor.html">Expert Advisor (EA)</a>
       <a href="/app/" style="color:var(--orange);font-weight:600">📱 Live Signale App</a>
       <a href="#broker">Partner Broker</a>
-      <a href="#faq">FAQ</a>
       <a href="./about.html">Über uns</a>
       <details class="lang-switch">
         <summary class="lang-current" title="Deutsch" aria-label="Deutsch"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Deutsch">
@@ -2113,7 +2126,7 @@
     </div>
     <div class="broker-card">
       <h3>Kostenlose Lizenz sichern</h3>
-      <p>Eröffne ein Trading-Konto bei unserem Partner-Broker und wir senden dir deine Pivot Point EA Lizenz + Telegram-VIP-Einladung innerhalb von 24 Stunden.</p>
+      <p>Eröffne ein Konto bei unserem Partner-Broker, sende uns deine MT5-Kontonummer und wir schicken dir deinen Pivot Point EA innerhalb von 24 Stunden zu.</p>
       <a href="https://your-affiliate-link.com" class="btn btn-primary btn-lg" style="width:100%">Kostenloses Broker-Konto eröffnen</a>
       <p class="small">Keine Einzahlung nötig zum Start. Minimum $100 um EA zu aktivieren.</p>
     </div>
@@ -2160,7 +2173,7 @@
           </span>
           <span>Pivot<em>Signal</em></span>
         </a>
-        <p>Algorithmic pivot point trading signals + MT5 Expert Advisor. MyFXBook verified. Trusted by 12,000+ traders in 47 countries.</p>
+        <p class="footer-email"><a href="mailto:support@pivot-signal.com">support@pivot-signal.com</a></p>
       </div>
       <div>
         <h5>Product</h5>

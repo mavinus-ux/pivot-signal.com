@@ -1150,6 +1150,21 @@
   .footer ul li { margin-bottom: 10px; }
   .footer ul a:hover { color: var(--green); }
   .footer-brand p { margin: 12px 0 0; line-height: 1.6; }
+
+  /* Footer email (under logo) */
+  .footer-brand .footer-email {
+    margin: 14px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .footer-brand .footer-email a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .footer-brand .footer-email a:hover {
+    text-decoration: underline;
+  }
+
   .footer-bottom {
     border-top: 1px solid var(--border);
     padding-top: 24px;
@@ -1648,10 +1663,10 @@
     list-style: none;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    width: 38px;
-    height: 24px;
-    padding: 0 4px;
+    gap: 5px;
+    width: 46px;
+    height: 30px;
+    padding: 0 6px;
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: 100px;
@@ -1665,8 +1680,8 @@
   .lang-switch > summary::-webkit-details-marker { display: none; }
   .lang-switch > summary::marker { display: none; content: ''; }
   .lang-switch .lang-current .flag-svg {
-    width: 26px;
-    height: 18px;
+    width: 32px;
+    height: 22px;
     border-radius: 3px;
     object-fit: cover;
   }
@@ -1835,11 +1850,9 @@
       <span>Pivot<em>Signal</em></span>
     </a>
     <nav class="nav">
-      <a href="#signals">Signaux</a>
       <a href="../en/all-eas.html">Tous les EAs</a>
       <a href="/app/" style="color:var(--orange);font-weight:600">📱 App Signaux</a>
       <a href="#broker">Broker Partenaire</a>
-      <a href="#faq">FAQ</a>
       <a href="../en/about.html">À propos</a>
       <details class="lang-switch">
         <summary class="lang-current" title="Français" aria-label="Français"><svg class="flag-svg" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-label="Français">
@@ -2184,7 +2197,7 @@
     </div>
     <div class="broker-card">
       <h3>Réclamez Votre Licence Gratuite</h3>
-      <p>Open a trading account with our partner broker and we'll send your Pivot Point EA license + Telegram VIP invite within 24 hours.</p>
+      <p>Ouvrez un compte avec notre broker partenaire, soumettez votre numéro de compte MT5 et nous vous enverrons votre EA pivot point dans les 24 heures.</p>
       <a href="https://your-affiliate-link.com" class="btn btn-primary btn-lg" style="width:100%">Ouvrir un Compte Broker Gratuit</a>
       <p class="small">Aucun dépôt requis pour commencer. Minimum 100$ pour activer l&#039;EA.</p>
     </div>
@@ -2228,7 +2241,7 @@
           </span>
           <span>Pivot<em>Signal</em></span>
         </a>
-        <p>Signaux de trading algorithmiques par points pivots + Expert Advisor MT5. Vérifié par MyFXBook. Real results, no hype.</p>
+        <p class="footer-email"><a href="mailto:support@pivot-signal.com">support@pivot-signal.com</a></p>
       </div>
       <div>
         <h5>Product</h5>
