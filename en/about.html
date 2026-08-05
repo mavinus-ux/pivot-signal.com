@@ -228,12 +228,18 @@
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 40px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 280px;
-    text-align: center;
+    overflow: hidden;
+  }
+  .about-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
   }
   .about-visual .placeholder-icon {
     font-size: 64px;
@@ -444,43 +450,7 @@
         <p class="closing"><strong>Trade the levels institutions trade. Let the EA do the execution.</strong></p>
       </div>
       <div class="about-visual">
-        <div>
-          <div class="placeholder-icon">📊</div>
-          <p>EA dashboard / chart</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT I BUILD -->
-<section class="about-section">
-  <div class="container">
-    <div class="about-grid reverse">
-      <div>
-        <div class="about-label">The Products</div>
-        <h2>Three EAs. <span>One mission.</span></h2>
-        <p>I built Pivot-Signal because I wanted tools that actually work in the real market — not backtested-to-death systems that fall apart on live accounts. Every EA here is tested on real broker data, with real spreads, real slippage.</p>
-        <p>The three strategies cover the three main market regimes: ranging (Pivot Point), breakout (Breakout EA), and trending (Trendfolge EA). Pick one or run all three.</p>
-      </div>
-      <div>
-        <div class="products-list">
-          <div class="product-card">
-            <div class="icon">📊</div>
-            <h3>Pivot Point EA</h3>
-            <p>Mean reversion at key price levels. Best for ranging / sideways markets.</p>
-          </div>
-          <div class="product-card">
-            <div class="icon">💥</div>
-            <h3>Breakout EA</h3>
-            <p>Range detection + volume confirmation. Catches explosive moves.</p>
-          </div>
-          <div class="product-card">
-            <div class="icon">📈</div>
-            <h3>Trendfolge EA</h3>
-            <p>Multi-timeframe trend following. Runs on 12+ instruments.</p>
-          </div>
-        </div>
+        <img src="./imgs/about-visual.png" alt="Pivot Signal EA — institutional pivot levels visualization" loading="lazy">
       </div>
     </div>
   </div>
@@ -506,10 +476,7 @@
         </ul>
       </div>
       <div class="about-visual">
-        <div>
-          <div class="placeholder-icon">⚙️</div>
-          <p>Trading chart visual</p>
-        </div>
+        <img src="./imgs/about-visual.png" alt="Pivot Signal trading visualization" loading="lazy">
       </div>
     </div>
   </div>
