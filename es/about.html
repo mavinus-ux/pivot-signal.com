@@ -1,30 +1,29 @@
 ﻿<!DOCTYPE html>
-<html lang="de">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About — Pivot-Signal</title>
-  <link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/about.html" />
-  <link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/about.html" />
-  <link rel="alternate" hreflang="fr" href="https://pivot-signal.com/fr/about.html" />
+<title>Acerca de — Pivot-Signal</title>
   <link rel="alternate" hreflang="es" href="https://pivot-signal.com/es/about.html" />
-<meta name="description" content="Learn about Pivot-Signal — who we are, what we build, and why we exist." />
+  <link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/en/" />
+<meta name="description" content="Conoce Pivot-Signal — quiénes somos, qué construimos y por qué existimos." />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pivot-signal.com/de/about.html" />
-  <meta property="og:title" content="Über uns — Pivot-Signal" />
-  <meta property="og:description" content="20+ Jahre Trading-Erfahrung. Keine 1000% Versprechen, kein Fake. Echte Trading-Tools aus echter Erfahrung." />
+  <meta property="og:url" content="https://pivot-signal.com/es/about.html" />
+  <meta property="og:title" content="Acerca de — Pivot-Signal" />
+  <meta property="og:description" content="20+ años de experiencia en trading. Sin promesas de 1000%, sin pruebas sociales falsas. Herramientas de trading reales construidas desde la experiencia real." />
   <meta property="og:image" content="https://pivot-signal.com/imgs/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Pivot-Signal" />
-  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale" content="es_ES" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://pivot-signal.com/de/about.html" />
-  <meta name="twitter:title" content="Über uns — Pivot-Signal" />
-  <meta name="twitter:description" content="20+ Jahre Trading-Erfahrung. Keine 1000% Versprechen, kein Fake. Echte Trading-Tools aus echter Erfahrung." />
+  <meta name="twitter:url" content="https://pivot-signal.com/es/about.html" />
+  <meta name="twitter:title" content="Acerca de — Pivot-Signal" />
+  <meta name="twitter:description" content="20+ años de experiencia en trading. Sin promesas de 1000%, sin pruebas sociales falsas." />
   <meta name="twitter:image" content="https://pivot-signal.com/imgs/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,9 +135,17 @@
   .about-hero p {
     font-size: 18px;
     color: var(--text-2);
-    max-width: 640px;
+    max-width: 680px;
     margin: 0 auto;
     line-height: 1.7;
+  }
+  .about-hero p + p {
+    margin-top: 18px;
+  }
+  .about-hero p:last-child {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
   }
 
   /* About Content */
@@ -198,16 +205,44 @@
     flex-shrink: 0;
     margin-top: 1px;
   }
+  .about-grid h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-1);
+    margin: 28px 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .about-grid p.lead {
+    font-size: 17px;
+    color: var(--text-1);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .about-grid p.closing {
+    font-size: 17px;
+    color: var(--text-1);
+    line-height: 1.5;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
   .about-visual {
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 40px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 280px;
-    text-align: center;
+    overflow: hidden;
+  }
+  .about-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
   }
   .about-visual .placeholder-icon {
     font-size: 64px;
@@ -340,11 +375,11 @@
       <span>Pivot<em>Signal</em></span>
     </a>
     <nav class="nav">
-      <a href="../index.html#signals">Signale</a>
-      <a href="../all-eas.html">Alle EAs</a>
-      <a href="../custom-ea.html">Custom EA</a>
-      <a href="./expert-advisor.html">Was ist ein EA</a>
-      <a href="../index.html#broker">Partner Broker</a>
+      <a href="../index.html#signals">Señales</a>
+      <a href="../all-eas.html">Todos los EAs</a>
+      <a href="../custom-ea.html">EA Personalizado</a>
+      <a href="./expert-advisor.html">Qué es un EA</a>
+      <a href="../index.html#broker">Broker Asociado</a>
         </nav>
   </div>
 
@@ -356,78 +391,58 @@
   
   <div class="mobile-menu" id="mobile-menu">
     <button class="mobile-close" aria-label="Close menu" onclick="toggleMobileMenu()">×</button>
-    <a href="../index.html">Startseite</a>
-        <a href="../all-eas.html">Alle EAs</a>
-        <a href="../custom-ea.html">Custom EA</a>
-        <a href="../expert-advisor.html">Was ist ein EA</a>
-        <a href="../index.html#broker">Partner Broker</a>
+    <a href="../index.html">Inicio</a>
+        <a href="../all-eas.html">Todos los EAs</a>
+        <a href="../custom-ea.html">EA Personalizado</a>
+        <a href="../expert-advisor.html">What is an EA</a>
+        <a href="../index.html#broker">Broker Asociado</a>
         </div>
 </header>
 
 <!-- HERO -->
 <section class="about-hero">
   <div class="container">
-    <span class="eyebrow">Über uns</span>
-    <h1>Wer steckt hinter <span>Pivot-Signal</span>?</h1>
-    <p>Automatisierte Trading-Tools für Trader die Ergebnisse wollen — nicht Komplexität. Kein Hype, keine leeren Versprechen. Nur Algorithmen die funktionieren.</p>
+    <span class="eyebrow">Acerca de</span>
+    <h1>¿Quién está detrás de <span>Pivot Signal</span>?</h1>
+
+    <p>20.000 horas estudiando gráficos, price action y fundamentales. Cada indicador. Cada estrategia. Cada framework que el mercado tiene para ofrecer.</p>
+
+    <p>Y esto es lo que toda esa complejidad me enseñó: <strong>la simplicidad gana</strong>.</p>
+
+    <p>Cuanto más aprendía, más simplificaba. Porque la complejidad es enemiga de la ejecución. El trader que duda pierde. El sistema que sobrepiensa falla.</p>
+
+    <p>¿Qué queda? Los niveles que realmente importan. Los pivotes que las instituciones respetan. Las reglas más limpias posibles &mdash; manejadas automáticamente, sin emoción, sin dudar.</p>
+
+    <p><strong>Eso es Pivot Signal. No a pesar de la investigación. Gracias a ella.</strong></p>
   </div>
 </section>
 
-<!-- WHO I AM -->
+<!-- WHAT MOVES THE MARKET -->
 <section class="about-section">
   <div class="container">
     <div class="about-grid">
       <div>
-        <div class="about-label">Die Person</div>
-        <h2>20+ Jahre in den <span>Märkten</span></h2>
-        <p>Ich habe jede Strategie gesehen, jeden Indikator, jedes "garantierte" System. Jahrelang manuell gehandelt — hoher Hebel, Bauchgefühl, Moves hinterherjagen. Ich habe verloren. Mehr als einmal. So habe ich gelernt, was wirklich funktioniert.</p>
-        <p>Der Wendepunkt: zu studieren, wie professionelle Fonds wirklich arbeiten. Nicht die Märchen von YouTube — die echten. Sie zielen nicht auf 1000%. Sie zielen darauf, 50% pro Jahr zu schlagen und es zu compoundieren. Das ist das Spiel.</p>
-        <p>Pivot-Signal wurde aus dieser Realität geboren. Kein Hype, keine Versprechen. Nur Algorithmen aus echter Erfahrung.</p>
-        <ul>
-          <li>20+ Jahre Trading-Erfahrung</li>
-          <li>Algorithmisches / systematisches Trading seit den frühen 2000ern</li>
-          <li>Fokus: Swing-Trading, Mean Reversion, Risk-First-Ansatz</li>
-          <li>Märkte: EUR/USD, GBP/JPY, XAU/USD</li>
-        </ul>
+        <div class="about-label">Pivot Signal EA</div>
+        <h2>Lo que mueve al <span>Mercado</span></h2>
+        <p class="lead"><strong>Tradea los niveles que las instituciones tradean.</strong> Ellas tienen los algos. Tú tienes el mapa.</p>
+
+        <p>Los titulares mueven los mercados en milisegundos. Los algoritmos ejecutan el 70% del volumen. Los hedge funds y los bancos escuchan las noticias antes que tú &mdash; y el mercado siempre toma el camino del dolor, activando tus stops antes del movimiento real.</p>
+
+        <p>No puedes leer las noticias más rápido. No puedes hacer clic más rápido que una máquina.<br><strong>Pero no tienes que hacerlo.</strong></p>
+
+        <h3>Lo que hace Pivot Signal en su lugar</h3>
+        <p>Pivot Signal EA no adivina la dirección. Lee dónde tiene que ir el mercado &mdash; los niveles de precio institucionales que los algos respetan, los pools de liquidez que apuntan, y los pivotes a los que reaccionan cada sesión. No requiere noticias. No necesita ventaja interna. Solo estructura.</p>
+
+        <h3>Cómo funciona</h3>
+        <p>El EA funciona 24/5 dentro de MetaTrader 5, colocando y gestionando órdenes automáticamente basadas en los niveles de pivote calculados desde la sesión anterior. Entrada, stop-loss, break-even y take-profit &mdash; todo manejado. No te quedas frente a la pantalla. No te pierdes el setup. No tradeas por venganza.</p>
+
+        <h3>Para quién está hecho</h3>
+        <p>Para traders que quieren ganarle al mercado a largo plazo y compound de forma consistente. No con suerte &mdash; con niveles, disciplina, y un EA que ejecuta mientras vives tu vida.</p>
+
+        <p class="closing"><strong>Tradea los niveles que las instituciones tradean. Deja que el EA haga la ejecución.</strong></p>
       </div>
       <div class="about-visual">
-        <div>
-          <div class="placeholder-icon">👤</div>
-          <p>Dein Foto / Avatar hier</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT I BUILD -->
-<section class="about-section">
-  <div class="container">
-    <div class="about-grid reverse">
-      <div>
-        <div class="about-label">Die Produkte</div>
-        <h2>Drei EAs. <span>Eine Mission.</span></h2>
-        <p>Ich habe Pivot-Signal gebaut, weil ich Werkzeuge wollte, die im echten Markt tatsächlich funktionieren — keine zu Tode gebacktesteten Systeme, die auf Live-Konten zusammenbrechen. Jeder EA hier ist mit echten Broker-Daten getestet, mit echten Spreads, echtem Slippage.</p>
-        <p>Die drei Strategien decken die drei wichtigsten Marktphasen ab: Seitwärts (Pivot Point), Breakout (Breakout EA) und Trend (Trendfolge EA). Wähle einen oder lass alle drei laufen.</p>
-      </div>
-      <div>
-        <div class="products-list">
-          <div class="product-card">
-            <div class="icon">📊</div>
-            <h3>Pivot Point EA</h3>
-            <p>Mean Reversion an wichtigen Preislevels. Am besten für Seitwärts-Märkte.</p>
-          </div>
-          <div class="product-card">
-            <div class="icon">💥</div>
-            <h3>Breakout EA</h3>
-            <p>Range-Erkennung + Volumen-Bestätigung. Fängt explosive Bewegungen.</p>
-          </div>
-          <div class="product-card">
-            <div class="icon">📈</div>
-            <h3>Trendfolge EA</h3>
-            <p>Multi-Timeframe Trendfolge. Läuft auf 12+ Instrumenten.</p>
-          </div>
-        </div>
+        <img src="./imgs/about-visual.png" alt="Pivot Signal EA — visualización de niveles de pivote institucionales" loading="lazy">
       </div>
     </div>
   </div>
@@ -438,18 +453,18 @@
   <div class="container">
     <div class="about-grid">
       <div>
-        <div class="about-label">Wie ich arbeite</div>
-        <h2>Was ich <span>nicht</span> verspreche</h2>
-        <p>Ich bin direkt mit dir — denn das ist der einzige Weg, nachhaltig zu handeln.</p>
-        <p>Jeder, der 1000% Gewinne verspricht? Das ist ein Scam. Immer. Die besten Hedgefonds der Welt zielen auf 50% pro Jahr und arbeiten hart daran, diese Zahl zu schlagen. Das ist der realistische Maßstab. Nicht ein TikTok-Video von einem "Trader", der zeigt, wie aus einem 10.000$-Konto in einem Monat 1 Mio. $ wird.</p>
-        <p>Hoher Hebel + Bauchgefühl + animalische Instinkte = totaler Kontoverlust. Das ist kein Trading, das ist Glücksspiel mit Extraschritten.</p>
-        <p>Was ich dir gebe: Algorithmen, die strengen Regeln folgen, Risiko richtig managen und nicht bei einem einzigen schlechten Trade zerbrechen. Konstant. Diszipliniert. Langweilig im bestmöglichen Sinne.</p>
+        <div class="about-label">Cómo trabajo</div>
+        <h2>Lo que <span>no</span> te prometo</h2>
+        <p>Seré directo contigo &mdash; porque esa es la única forma de tradear de forma sostenible.</p>
+        <p>¿Alguien prometiendo 1000% de ganancias? Es una estafa. Siempre. Los mejores hedge funds del mundo apuntan al 50% anual y trabajan duro para superar esa cifra. Ese es el referente realista. No un video de TikTok de un "trader" mostrando una cuenta de 10.000$ convertida en 1M$ en un mes.</p>
+        <p>Apalancamiento alto + intuición + instintos animales = pérdida total de la cuenta. Eso no es trading, es gambling con pasos extra.</p>
+        <p>Lo que te doy: algoritmos que siguen reglas estrictas, gestionan el riesgo correctamente, y no se desploman en un solo mal trade. Consistentes. Disciplinados. Aburridos de la mejor manera posible.</p>
         <ul>
-          <li>Kein Martingale, kein Grid, keine gefährliche Lot-Größe</li>
-          <li>Realistische Renditeziele — keine Märchen</li>
-          <li>MyFXBook-verifizierte Echtgeld-Ergebnisse</li>
-          <li>Lebenslange Lizenz, keine versteckten Gebühren, keine Abos</li>
-          <li>30-Tage-Geld-zurück-Garantie auf jeden EA</li>
+          <li>Sin martingale, sin grid, sin dimensionamiento peligroso de lotes</li>
+          <li>Objetivos de retorno realistas &mdash; no cuentos de hadas</li>
+          <li>Resultados con dinero real verificados en MyFXBook</li>
+          <li>Licencia de por vida, sin tarifas ocultas, sin suscripciones</li>
+          <li>Garantía de devolución de 30 días en cada EA</li>
         </ul>
       </div>
     </div>
@@ -459,11 +474,11 @@
 <!-- CTA -->
 <section class="about-cta">
   <div class="container">
-    <h2>Bereit, es in Aktion zu sehen?</h2>
-    <p>Browse the EAs, read the setup guide, or jump straight to the broker to get started.</p>
+    <h2>¿Listo para verlo en acción?</h2>
+    <p>Explora los EAs, lee la guía de instalación, o salta directamente al broker para empezar.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a href="./expert-advisor.html" class="btn btn-primary">EAs entdecken →</a>
-      <a href="./index.html#broker" class="btn btn-secondary">Kostenlos starten →</a>
+      <a href="./expert-advisor.html" class="btn btn-primary">Explorar EAs →</a>
+      <a href="./index.html#broker" class="btn btn-secondary">Empezar gratis →</a>
     </div>
   </div>
 </section>
@@ -472,7 +487,7 @@
 <footer class="footer">
   <div class="container">
     <p class="footer-email" style="margin-bottom: 16px;"><a href="mailto:support@pivot-signal.com" style="color:var(--green); text-decoration:none; font-weight:500;">support@pivot-signal.com</a></p>
-    <p>© 2025 Pivot-Signal. All rights reserved. · <a href="./index.html" style="color:var(--text-3);">Home</a> · <a href="./index.html#faq" style="color:var(--text-3);">FAQ</a> · <a href="./impressum.html" style="color:var(--text-3);">Impressum</a> · <a href="./datenschutz.html" style="color:var(--text-3);">Datenschutzerklärung</a></p>
+    <p>© 2025 Pivot-Signal. Todos los derechos reservados. · <a href="./index.html" style="color:var(--text-3);">Inicio</a> · <a href="./index.html#faq" style="color:var(--text-3);">FAQ</a> · <a href="./impressum.html" style="color:var(--text-3);">Aviso legal</a> · <a href="./privacy.html" style="color:var(--text-3);">Política de privacidad</a></p>
   </div>
 </footer>
 
