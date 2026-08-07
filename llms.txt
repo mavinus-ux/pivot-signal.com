@@ -1,0 +1,54 @@
+# Pivot-Signal
+
+> Automated MT5 Expert Advisors and daily Telegram trading signals. Trade the levels institutions trade. 100% free with our partner broker.
+
+## Main Pages
+- [English Landing](https://pivot-signal.com/en/): Free MT5 EA + Telegram signals
+- [German Landing](https://pivot-signal.com/de/): Kostenlose MT5 EAs + Telegram Signale
+- [French Landing](https://pivot-signal.com/fr/): EA MT5 Gratuit + Signaux Telegram
+- [Spanish Landing](https://pivot-signal.com/es/): EA MT5 Gratis + Señales Telegram
+
+## Key Products
+- Pivot Point EA: Mean reversion at S1/S2/S3, P, R1/R2/R3 pivot levels
+- Breakout EA: Range detection + volume confirmation
+- Trendfolge EA: Multi-timeframe trend following
+
+## Trading Concepts We Cover
+- Pivot Points (Daily, Weekly, Monthly)
+- SuperTrend indicator (8 timeframes)
+- Support and Resistance
+- Risk Management (position sizing, stop-loss, take-profit)
+- MyFXBook verification
+- MetaTrader 5 (MT5) Expert Advisors
+- Telegram trading signals
+- Forex pairs: EUR/USD, GBP/JPY, XAU/USD
+
+## Frequently Asked Questions
+Q: Is the EA free?
+A: Yes, 100% free with our partner broker. No deposit required to start, minimum $100 to activate.
+
+Q: Do I need trading experience?
+A: No. The EA is fully automated. Install it, set your risk level, and let it run.
+
+Q: Which broker do I need to use?
+A: We work with one regulated partner broker. The EA works on any MT5 account but free license requires funding with our partner.
+
+Q: Are there hidden costs?
+A: No hidden costs. No monthly fees, no subscriptions, no commissions on trades.
+
+Q: How do I install the EA?
+A: 5 minutes: download .ex5 → open MT5 Data Folder → paste into MQL5/Experts → restart MT5 → enable AutoTrading → drag EA onto chart.
+
+Q: Can I test before purchasing?
+A: Yes. Free demo license for MT5 demo accounts. We recommend 2-4 weeks demo before going live.
+
+## Trust Signals
+- MyFXBook verified real-money performance
+- Licensed broker with segregated client funds
+- 20+ years trading experience
+- No martingale, no grid, no dangerous lot sizing
+- 30-day money-back guarantee
+
+## Contact
+- Email: support@pivot-signal.com
+- Telegram: https://t.me/pivotsignal

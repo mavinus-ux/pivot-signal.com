@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MT4 vs MT5 for Expert Advisors: Which is Better? — Pivot-Signal</title>
+<meta name="description" content="MT4 vs MT5 for automated trading: a head-to-head comparison. Speed, language, backtesting, and why Pivot-Signal only runs on MT5.">
+<link rel="canonical" href="https://pivot-signal.com/en/compare/mt4-vs-mt5.html">
+<link rel="alternate" hreflang="en" href="https://pivot-signal.com/en/compare/mt4-vs-mt5.html" />
+<link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/compare/mt4-vs-mt5.html" />
+<link rel="alternate" hreflang="fr" href="https://pivot-signal.com/fr/compare/mt4-vs-mt5.html" />
+<link rel="alternate" hreflang="es" href="https://pivot-signal.com/es/compare/mt4-vs-mt5.html" />
+<link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/en/compare/mt4-vs-mt5.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MT4 vs MT5 for Expert Advisors: Which is Better?",
+  "description": "Comparison of MetaTrader 4 and MetaTrader 5 for automated trading. Speed, language, backtesting, and broker support.",
+  "author": {"@type": "Organization", "name": "Pivot-Signal"},
+  "publisher": {"@type": "Organization", "name": "Pivot-Signal", "logo": {"@type": "ImageObject", "url": "https://pivot-signal.com/imgs/logo.png"}},
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07"
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0A0A12;color:#E5E7EB;margin:0;padding:0;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+h1{font-size:2.2rem;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#fff,#88D8C0,#FF6B1A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FF6B1A;margin-bottom:14px}
+.subtitle{color:#9CA3AF;font-size:1.05rem;margin-bottom:36px}
+h2{font-size:1.4rem;font-weight:700;color:#fff;margin:36px 0 12px}
+h3{font-size:1.1rem;font-weight:700;color:#88D8C0;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;margin:24px 0;background:#13131F;border-radius:10px;overflow:hidden}
+th{background:rgba(255,107,26,0.1);color:#FF6B1A;text-align:left;padding:14px 16px;font-size:0.9rem;font-weight:700}
+td{padding:14px 16px;border-top:1px solid #1F1F2E;font-size:0.95rem}
+tr:hover td{background:rgba(136,216,192,0.05)}
+.pro{color:#10B981;font-weight:600}
+.con{color:#EF4444}
+.neutral{color:#9CA3AF}
+.cta{margin-top:48px;padding:32px;background:linear-gradient(135deg,rgba(255,107,26,0.1),rgba(136,216,192,0.1));border:1px solid #FF6B1A;border-radius:12px;text-align:center}
+.cta h3{font-size:1.3rem;font-weight:800;margin:0 0 12px;color:#fff}
+.cta p{color:#9CA3AF;margin:0 0 18px}
+.cta a{background:#FF6B1A;color:#000;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
+.back-link{display:inline-block;color:#88D8C0;text-decoration:none;margin-bottom:24px;font-size:0.9rem}
+.takeaway{background:rgba(45,212,191,0.08);border-left:4px solid #2DD4BF;padding:18px 22px;border-radius:0 8px 8px 0;margin:24px 0;color:#E5E7EB}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="../index.html" class="back-link">← Back to Pivot-Signal</a>
+
+<span class="eyebrow">Comparison</span>
+<h1>MT4 vs MT5 for Expert Advisors</h1>
+<p class="subtitle">MetaTrader 4 vs MetaTrader 5 for automated trading. Speed, language, backtesting, and broker support compared head-to-head.</p>
+
+<h2>Quick Verdict</h2>
+<div class="takeaway">
+<strong>For new EAs in 2026, choose MT5.</strong> It's faster, supports more order types, has a better backtester, and is what every new broker offers. <strong>MT4 is legacy</strong> — most brokers are slowly phasing it out. <strong>Pivot-Signal EAs only run on MT5</strong> for these reasons.
+</div>
+
+<h2>Side-by-Side Comparison</h2>
+<table>
+<thead>
+<tr><th>Feature</th><th>MT4</th><th>MT5</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Released</strong></td><td>2005 (21 years old)</td><td>2010 (16 years old)</td></tr>
+<tr><td><strong>Programming language</strong></td><td>MQL4 (C-like)</td><td>MQL5 (C++-like, OOP)</td></tr>
+<tr><td><strong>Backtest speed</strong></td><td class="con">Slow (single-threaded)</td><td class="pro">Fast (multi-threaded, 10x faster)</td></tr>
+<tr><td><strong>Backtest accuracy</strong></td><td class="neutral">"Every tick" mode OK</td><td class="pro">Real ticks available, true OHLC</td></tr>
+<tr><td><strong>Order types</strong></td><td>4 (Market, Limit, Stop, Stop-Limit via EA)</td><td class="pro">8 native (Buy Stop-Limit, Sell Stop-Limit, etc.)</td></tr>
+<tr><td><strong>Timeframes</strong></td><td>9 (M1 to MN1)</td><td class="pro">21 (M1 to MN1, plus seconds and ranges)</td></tr>
+<tr><td><strong>Built-in indicators</strong></td><td>30</td><td class="pro">38</td></tr>
+<tr><td><strong>Economic calendar</strong></td><td class="con">Not built-in</td><td class="pro">Built-in</td></tr>
+<tr><td><strong>Depth of Market (DOM)</strong></td><td class="con">No (only as plugin)</td><td class="pro">Yes, native</td></tr>
+<tr><td><strong>Multi-currency backtest</strong></td><td class="con">No</td><td class="pro">Yes</td></tr>
+<tr><td><strong>Strategy tester (visual mode)</strong></td><td class="neutral">Available</td><td class="pro">Available with tick playback</td></tr>
+<tr><td><strong>Hedging</strong></td><td class="pro">Yes (native)</td><td>Yes (but not always supported by brokers)</td></tr>
+<tr><td><strong>Netting</strong></td><td class="con">No</td><td class="pro">Yes</td></tr>
+<tr><td><strong>Mobile app</strong></td><td class="neutral">Available</td><td class="pro">Better UI, more features</td></tr>
+<tr><td><strong>EA community size</strong></td><td class="pro">Larger (older platform)</td><td class="neutral">Growing fast</td></tr>
+<tr><td><strong>Broker support in 2026</strong></td><td class="con">Phasing out</td><td class="pro">Standard</td></tr>
+</tbody>
+</table>
+
+<h2>Why MT5 Wins for New EAs</h2>
+
+<h3>1. Speed</h3>
+<p>MT5's multi-threaded strategy tester runs backtests <strong>10x faster</strong> than MT4. A 5-year backtest that takes 30 minutes in MT4 takes 3 minutes in MT5. This means more parameter combinations tested, faster optimization, and quicker iteration.</p>
+
+<h3>2. Real tick data</h3>
+<p>MT5 can use real tick data from your broker (downloaded automatically), making backtests reflect actual execution conditions. MT4's "every tick" mode is generated from OHLC bars, which can miss intrabar volatility.</p>
+
+<h3>3. Modern order types</h3>
+<p>MT5 supports <strong>Buy Stop-Limit</strong> and <strong>Sell Stop-Limit</strong> orders natively. MT4 requires EA workarounds. For EAs that need precise entry triggers, this is a real advantage.</p>
+
+<h3>4. More timeframes</h3>
+<p>MT5 has 21 timeframes (M1, M2, M3, M4, M5, M6, M10, M12, M15, M20, M30, H1, H2, H3, H4, H6, H8, H12, D1, W1, MN1) vs MT4's 9. More granularity for strategies that need non-standard timeframes.</p>
+
+<h3>5. Multi-currency backtest</h3>
+<p>MT5 can backtest a strategy that trades multiple symbols simultaneously. MT4 can only test one symbol at a time. For EAs that scan multiple instruments (like Pivot-Signal's Trendfolge), this is essential.</p>
+
+<h2>Why MT4 Still Has Users</h2>
+
+<h3>1. EA library</h3>
+<p>MT4 has 15+ years of free and paid EAs. If you need a specific niche strategy, it might only exist in MT4.</p>
+
+<h3>2. Brokers that only offer MT4</h3>
+<p>Some smaller brokers still only support MT4. If your broker doesn't offer MT5, you're stuck with MT4.</p>
+
+<h3>3. Familiarity</h3>
+<p>Traders who started 10+ years ago know MT4 by heart. Switching has a learning curve.</p>
+
+<h2>Migration Path from MT4 to MT5</h2>
+<p>Most MT4 EAs need a full rewrite for MT5. The MQL4 → MQL5 conversion is not automatic. Pivot-Signal EAs were written from scratch in MQL5 to use the modern language features (OOP, events, depth of market).</p>
+
+<div class="takeaway">
+<strong>My recommendation:</strong> If you have a choice, start with MT5 in 2026. The platform is faster, more capable, and what every new broker offers. Pivot-Signal EAs are MT5-only for these reasons.
+</div>
+
+<h2>How Pivot-Signal Uses MT5 Features</h2>
+<ul>
+<li><strong>Multi-threaded backtester:</strong> tests 10 years of EUR/USD data in 5 minutes</li>
+<li><strong>Real tick data:</strong> backtests reflect actual broker execution</li>
+<li><strong>Multiple timeframes:</strong> monitors 8 timeframes (M5 to MN1) for SuperTrend</li>
+<li><strong>Multi-currency:</strong> Trendfolge EA trades 12+ symbols simultaneously</li>
+<li><strong>Economic calendar:</strong> EA can pause trading during high-impact news</li>
+</ul>
+
+<div class="cta">
+<h3>Try Pivot-Signal on MT5</h3>
+<p>Our free Expert Advisors are MT5-native. Install in 5 minutes, see results in 24 hours.</p>
+<a href="../index.html#broker">Get Started Free →</a>
+</div>
+
+</div>
+</body>
+</html>

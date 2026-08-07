@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid vs Martingale: Pourquoi Pivot-Signal n'utilise aucun des deux — Pivot-Signal</title>
+<meta name="description" content="Stratégies Grid et Martingale expliquées: pourquoi elles semblent rentables en backtest mais font exploser les comptes en trading réel.">
+<link rel="canonical" href="https://pivot-signal.com/fr/compare/grid-vs-martingale.html">
+<link rel="alternate" hreflang="en" href="https://pivot-signal.com/fr/compare/grid-vs-martingale.html" />
+<link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/compare/grid-vs-martingale.html" />
+<link rel="alternate" hreflang="fr" href="https://pivot-signal.com/fr/compare/grid-vs-martingale.html" />
+<link rel="alternate" hreflang="es" href="https://pivot-signal.com/es/compare/grid-vs-martingale.html" />
+<link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/fr/compare/grid-vs-martingale.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Grid vs Martingale: The High-Risk Strategies Pivot-Signal Avoids",
+  "description": "Pourquoi ces stratégies de sizing populaires mais dangereuses causent 90% des explosions de compte.",
+  "author": {"@type": "Organization", "name": "Pivot-Signal"},
+  "publisher": {"@type": "Organization", "name": "Pivot-Signal", "logo": {"@type": "ImageObject", "url": "https://pivot-signal.com/imgs/logo.png"}},
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07"
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0A0A12;color:#E5E7EB;margin:0;padding:0;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+h1{font-size:2.2rem;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#fff,#88D8C0,#FF6B1A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FF6B1A;margin-bottom:14px}
+.subtitle{color:#9CA3AF;font-size:1.05rem;margin-bottom:36px}
+h2{font-size:1.4rem;font-weight:700;color:#fff;margin:36px 0 12px}
+h3{font-size:1.1rem;font-weight:700;color:#88D8C0;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;margin:24px 0;background:#13131F;border-radius:10px;overflow:hidden}
+th{background:rgba(255,107,26,0.1);color:#FF6B1A;text-align:left;padding:14px 16px;font-size:0.9rem;font-weight:700}
+td{padding:14px 16px;border-top:1px solid #1F1F2E;font-size:0.95rem}
+tr:hover td{background:rgba(136,216,192,0.05)}
+.pro{color:#10B981;font-weight:600}
+.con{color:#EF4444}
+.neutral{color:#9CA3AF}
+.cta{margin-top:48px;padding:32px;background:linear-gradient(135deg,rgba(255,107,26,0.1),rgba(136,216,192,0.1));border:1px solid #FF6B1A;border-radius:12px;text-align:center}
+.cta h3{font-size:1.3rem;font-weight:800;margin:0 0 12px;color:#fff}
+.cta p{color:#9CA3AF;margin:0 0 18px}
+.cta a{background:#FF6B1A;color:#000;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
+.back-link{display:inline-block;color:#88D8C0;text-decoration:none;margin-bottom:24px;font-size:0.9rem}
+.takeaway{background:rgba(45,212,191,0.08);border-left:4px solid #2DD4BF;padding:18px 22px;border-radius:0 8px 8px 0;margin:24px 0;color:#E5E7EB}
+.warning{background:rgba(239,68,68,0.08);border-left:4px solid #EF4444;padding:18px 22px;border-radius:0 8px 8px 0;margin:24px 0;color:#E5E7EB}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="../index.html" class="back-link">← Retour à Pivot-Signal</a>
+
+<span class="eyebrow">Comparaison de Stratégies</span>
+<h1>Grid vs Martingale: Pourquoi Pivot-Signal n'utilise aucun des deux</h1>
+<p class="subtitle">Ces deux stratégies semblent rentables en backtest mais sont la cause #1 des explosions de compte en trading réel. Voici ce que nous faisons.</p>
+
+<h2>Verdict Rapide</h2>
+<div class="warning">
+<strong>NE JAMAIS utiliser Grid ou Martingale sur un compte réel.</strong> Elles ont 95% de probabilité de finir par faire exploser votre compte. Elles ressemblent à des systèmes gagnants à 99% en backtest car elles cachent le risque dans des pertes rares et catastrophiques. <strong>Pivot-Signal utilise le retour à la moyenne + suivi de tendance avec une taille de position FIXE</strong> pour la sécurité.
+</div>
+
+<h2>Que sont Grid et Martingale?</h2>
+
+<h3>Stratégie Grid</h3>
+<p>A Grid strategy places buy and sell orders at fixed intervals (e.g., every 20 pips). As price moves, more orders are added, "filling the grid." The idea is to always have orders running in both directions, so as price oscillates, each order eventually closes in profit.</p>
+<p><strong>The illusion:</strong> "I always have orders in the market, so I always make money on the swings."</p>
+<p><strong>The reality:</strong> When a strong trend appears (e.g., a major news event), price runs through the entire grid, opening more and more positions in the losing direction. Eventually margin runs out and the account is wiped.</p>
+
+<h3>Stratégie Martingale</h3>
+<p>Martingale doubles the position size after each loss, with the idea that one win will recover all previous losses. Classic example: start with 0.01 lot, lose → next position is 0.02, lose → 0.04, lose → 0.08, win at 0.08 covers all previous losses.</p>
+<p><strong>The illusion:</strong> "I'll always recover my losses because the math is on my side."</p>
+<p><strong>The reality:</strong> A losing streak of 8-10 trades is not rare. The position sizes escalate exponentially: 0.01 → 0.02 → 0.04 → 0.08 → 0.16 → 0.32 → 0.64 → 1.28 → 2.56 → 5.12. By trade 8, you're risking the entire account on a single trade.</p>
+
+<h2>Pourquoi elles semblent bonnes en backtest</h2>
+<table>
+<thead>
+<tr><th>Ce que montre le backtest</th><th>Ce qui se passe réellement en live</th></tr>
+</thead>
+<tbody>
+<tr><td>98% win rate (only small wins count)</td><td class="con">1 catastrophic loss = -100%</td></tr>
+<tr><td>Smooth equity curve going up</td><td class="con">Flat for months, then a cliff</td></tr>
+<tr><td>"Maximum drawdown 15%"</td><td class="con">One event wipes the account</td></tr>
+<tr><td>Profitable on 5 years of data</td><td class="con">The 6th year is the blow-up year</td></tr>
+<tr><td>Recovers from drawdowns</td><td class="con">Margin call before recovery happens</td></tr>
+</tbody>
+</table>
+
+<h2>Exemples réels</h2>
+<h3>Grid Blowout (Example: EUR/USD in 2015 SNB Event)</h3>
+<p>On January 15, 2015, the Swiss National Bank unpegged the CHF from EUR. EUR/CHF moved 30% in minutes. Accounts using Grid strategies on EUR/CHF had 15+ open positions in the same direction. When brokers re-opened, accounts were -100% (margin call).</p>
+
+<h3>Martingale Blowout (Example: GBP/JPY in 2016)</h3>
+<p>After the Brexit vote, GBP/JPY dropped 1,500 pips in a single weekend. Traders using Martingale saw 5-7 consecutive losing positions. Position size on trade 7 was 64× the original. Account was -100%.</p>
+
+<h2>Ce que fait Pivot-Signal à la place</h2>
+<p>Pivot-Signal uses two strategies that have a <strong>positive expectancy with bounded risk</strong>:</p>
+
+<h3>1. Mean Reversion (Pivot Point EA)</h3>
+<p>When price touches a pivot level (S1, S2, S3 for longs; R1, R2, R3 for shorts), we enter with a <strong>FIXED lot size</strong> based on account risk (typically 1-2% of account).</p>
+<ul>
+<li>Stop-loss: 10 pips below entry (long) or above entry (short)</li>
+<li>Take-profit: TP1, TP2, TP3 at successive pivot levels</li>
+<li>Position size: <strong>NEVER</strong> increased after a loss</li>
+<li>Max risk per trade: 2% of account</li>
+</ul>
+
+<h3>2. Trend Following (SuperTrend + Trendfolge)</h3>
+<p>When SuperTrend flips direction, we enter in the new trend direction. Stop-loss is placed at the SuperTrend level (candle close on opposite side). Take-profit at next pivot levels.</p>
+<ul>
+<li>Fixed lot size based on ATR-adjusted risk</li>
+<li>Single open position per symbol per direction</li>
+<li>No position size escalation</li>
+<li>Stops based on market structure, not arbitrary pip counts</li>
+</ul>
+
+<h2>Comparaison des risques</h2>
+<table>
+<thead>
+<tr><th>Aspect</th><th>Grid / Martingale</th><th>Pivot-Signal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Position sizing</strong></td><td class="con">Increases after losses</td><td class="pro">Fixed 1-2% of account</td></tr>
+<tr><td><strong>Max risk per trade</strong></td><td class="con">Unbounded (can be 100%)</td><td class="pro">2% of account</td></tr>
+<tr><td><strong>Number of open positions</strong></td><td class="con">10-50+ per symbol</td><td class="pro">1 per symbol per direction</td></tr>
+<tr><td><strong>Stop-loss</strong></td><td class="con">Often none or very wide</td><td class="pro">Always present, 10 pips or ST-based</td></tr>
+<tr><td><strong>Expected return profile</strong></td><td class="con">99% of the time +1%, 1% of the time -100%</td><td class="pro">Steady equity curve with -15% max drawdown</td></tr>
+<tr><td><strong>Long-term survivability</strong></td><td class="con">5% chance over 3 years</td><td class="pro">95%+ chance over 5 years</td></tr>
+<tr><td><strong>Stress level</strong></td><td class="con">High (waiting for the inevitable blow)</td><td class="pro">Low (each trade is independent)</td></tr>
+</tbody>
+</table>
+
+<div class="takeaway">
+<strong>Why we built Pivot-Signal this way:</strong> Because we use it ourselves. Grid and Martingale might be profitable in a backtest, but they fail in real life. Pivot-Signal's edge comes from objective, deterministic rules with bounded risk on every single trade.
+</div>
+
+<h2>Les maths: Pourquoi Martingale échoue</h2>
+<p>Consider a 50/50 strategy (random wins/losses). After N losses in a row, your position size is 2^N × original. Here's the account destruction table:</p>
+<table>
+<thead>
+<tr><th>Losing streak</th><th>Position size</th><th>Account loss if trade fails</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0.01 lot</td><td>-1%</td></tr>
+<tr><td>3</td><td>0.08 lot</td><td>-8%</td></tr>
+<tr><td>5</td><td>0.32 lot</td><td>-32%</td></tr>
+<tr><td>7</td><td>1.28 lot</td><td>-100% (margin call)</td></tr>
+<tr><td>10</td><td>5.12 lot</td><td>-500% (impossible)</td></tr>
+</tbody>
+</table>
+<p>The probability of 7 consecutive losses on a 50/50 strategy is 1/128 (about 0.8%). On 100 trades, this happens with ~55% probability. <strong>It's not a matter of IF, but WHEN.</strong></p>
+
+<h2>Comment repérer un EA Grid/Martingale</h2>
+<p>Signaux d'alarme pour évaluer un EA:</p>
+<ul>
+<li>Marketing shows 99% win rate</li>
+<li>Backtest equity curve is a straight line up</li>
+<li>"No stop-loss" or "smart stop-loss" claims</li>
+<li>Multiple orders open per symbol per direction</li>
+<li>Position size grows over time without explanation</li>
+<li>No clear entry/exit logic (just "places orders at intervals")</li>
+</ul>
+
+<h2>Notre Promesse</h2>
+<p>Pivot-Signal EAs will never use Grid, Martingale, or any unbounded position sizing. Every trade has:</p>
+<ul>
+<li>Fixed position size based on account balance and risk %</li>
+<li>Hard stop-loss (10 pips for Pivot, candle-close for SuperTrend)</li>
+<li>Single open position per symbol per direction</li>
+<li>Maximum 2% account risk per trade</li>
+<li>Maximum 6% total exposure across all open positions</li>
+</ul>
+
+<div class="cta">
+<h3>Essayez Pivot-Signal — Risque Limité par Conception</h3>
+<p>Our Expert Advisors use only strategies with positive expectancy and bounded risk. See the MyFXBook verified track record.</p>
+<a href="../index.html#broker">Commencer gratuitement →</a>
+</div>
+
+</div>
+</body>
+</html>

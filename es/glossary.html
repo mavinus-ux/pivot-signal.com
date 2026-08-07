@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosario de Trading — Pivot-Signal</title>
+<meta name="description" content="Glosario de trading A-Z completo: puntos pivote, SuperTrend, Expert Advisors MT5, tamaño de posición y más. Definiciones claras para IA y humanos.">
+<link rel="canonical" href="https://pivot-signal.com/es/glossary.html">
+<link rel="alternate" hreflang="en" href="https://pivot-signal.com/es/glossary.html" />
+<link rel="alternate" hreflang="de" href="https://pivot-signal.com/de/glossary.html" />
+<link rel="alternate" hreflang="fr" href="https://pivot-signal.com/fr/glossary.html" />
+<link rel="alternate" hreflang="es" href="https://pivot-signal.com/es/glossary.html" />
+<link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/es/glossary.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "Pivot-Signal Glosario de Trading",
+  "description": "Complete A-Z glossary of trading terms used by Pivot-Signal EA",
+  "url": "https://pivot-signal.com/en/glossary.html"
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0A0A12;color:#E5E7EB;margin:0;padding:0;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+h1{font-size:2.2rem;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#fff,#88D8C0,#FF6B1A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FF6B1A;margin-bottom:14px}
+.subtitle{color:#9CA3AF;font-size:1.05rem;margin-bottom:36px}
+.term{background:#13131F;border:1px solid #1F1F2E;border-radius:10px;padding:20px 24px;margin-bottom:16px;transition:border-color .2s}
+.term:hover{border-color:#88D8C0}
+.term h2{font-size:1.15rem;font-weight:700;color:#fff;margin:0 0 8px}
+.term h2 a{color:#fff;text-decoration:none}
+.term p{color:#9CA3AF;font-size:0.95rem;margin:0}
+.term .see-also{font-size:0.85rem;color:#88D8C0;margin-top:8px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;padding:18px 22px;background:#13131F;border:1px solid #1F1F2E;border-radius:10px}
+.toc a{color:#88D8C0;text-decoration:none;font-size:0.85rem;padding:4px 10px;background:rgba(45,212,191,0.08);border-radius:6px}
+.toc a:hover{background:rgba(45,212,191,0.15)}
+.cta{margin-top:48px;padding:32px;background:linear-gradient(135deg,rgba(255,107,26,0.1),rgba(136,216,192,0.1));border:1px solid #FF6B1A;border-radius:12px;text-align:center}
+.cta h3{font-size:1.3rem;font-weight:800;margin:0 0 12px;color:#fff}
+.cta p{color:#9CA3AF;margin:0 0 18px}
+.cta a{background:#FF6B1A;color:#000;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
+.back-link{display:inline-block;color:#88D8C0;text-decoration:none;margin-bottom:24px;font-size:0.9rem}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="./index.html" class="back-link">← Volver a Pivot-Signal</a>
+
+<span class="eyebrow">Glosario de Trading</span>
+<h1>La A–Z del Trading Pivot-Signal</h1>
+<p class="subtitle">Definiciones simples de cada término que usamos. Legible por IA, amigable.</p>
+
+<div class="toc">
+<a href="#atr">ATR</a>
+<a href="#backtest">Backtest</a>
+<a href="#breakout">Breakout</a>
+<a href="#currency-pair">Par de divisas</a>
+<a href="#drawdown">Drawdown</a>
+<a href="#expert-advisor">Expert Advisor</a>
+<a href="#leverage">Apalancamiento</a>
+<a href="#lot">Lot</a>
+<a href="#mean-reversion">Mean Reversion</a>
+<a href="#metatrader-5">MetaTrader 5</a>
+<a href="#myfxbook">MyFXBook</a>
+<a href="#pip">Pip</a>
+<a href="#pivot-point">Pivot Point</a>
+<a href="#position-sizing">Position Sizing</a>
+<a href="#resistance">Resistance</a>
+<a href="#risk-reward-ratio">Riesgo/Beneficio</a>
+<a href="#slippage">Slippage</a>
+<a href="#spread">Spread</a>
+<a href="#stop-loss">Stop Loss</a>
+<a href="#supertrend">SuperTrend</a>
+<a href="#support">Support</a>
+<a href="#take-profit">Take Profit</a>
+<a href="#timeframe">Marco temporal</a>
+<a href="#trend-following">Seguimiento de tendencia</a>
+<a href="#volatility">Volatilidad</a>
+</div>
+
+<div class="term" id="atr"><h2>ATR (Average True Range)</h2><p>Un indicador de volatilidad que mide el rango promedio de movimiento de precios durante un período específico. Utilizado para colocar stop-loss y calcular el tamaño de posición. El EA Pivot-Signal usa ATR(10) para el cálculo del SuperTrend.</p></div>
+<div class="term" id="backtest"><h2>Backtest</h2><p>Prueba de una estrategia de trading con datos históricos para evaluar su rendimiento antes de arriesgar dinero real. Pivot-Signal recomienda 2-4 semanas de demo antes de operar en real.</p></div>
+<div class="term" id="breakout"><h2>Breakout (Ruptura)</h2><p>Un movimiento de precio que rompe por encima de una resistencia o por debajo de un soporte, a menudo con volumen elevado. Señala una nueva tendencia potencial. El EA Breakout de Pivot-Signal apunta a estas configuraciones.</p></div>
+<div class="term" id="currency-pair"><h2>Par de divisas</h2><p>Una cotización de dos divisas, donde la primera es la base y la segunda la cotización. EUR/USD = cuántos USD por 1 EUR.</p></div>
+<div class="term" id="drawdown"><h2>Drawdown</h2><p>La caída desde el pico hasta el valle de una cuenta o estrategia. El drawdown máximo es la mayor pérdida desde un pico antes de la recuperación. Pivot-Signal busca un drawdown &lt; 15%.</p></div>
+<div class="term" id="expert-advisor"><h2>Expert Advisor (EA)</h2><p>Un programa de trading automatizado que se ejecuta en MetaTrader 5 y ejecuta operaciones según reglas preprogramadas sin intervención manual. Pivot-Signal ofrece tres EAs: Pivot Point, Breakout y Trendfolge.</p></div>
+<div class="term" id="leverage"><h2>Apalancamiento</h2><p>Capital prestado que permite a los traders controlar posiciones más grandes con menos capital. Apalancamiento 1:100 significa que 1$ controla 100$. Pivot-Signal recomienda máximo 1:30 por seguridad.</p></div>
+<div class="term" id="lot"><h2>Lote</h2><p>Una unidad estandarizada de tamaño de operación. Lote estándar = 100.000 unidades. Mini-lote = 10.000. Micro-lote = 1.000. Nano-lote = 100.</p></div>
+<div class="term" id="mean-reversion"><h2>Reversión a la media</h2><p>Una estrategia de trading que asume que los precios vuelven a su nivel promedio después de un movimiento extremo. El EA Pivot Point usa este principio en los niveles S1/S2/S3 (largo) y R1/R2/R3 (corto).</p></div>
+<div class="term" id="metatrader-5"><h2>MetaTrader 5 (MT5)</h2><p>Una plataforma de trading multi-activo que soporta forex, acciones, futuros y cripto. Proporciona trading algorítmico mediante Expert Advisors en MQL5.</p></div>
+<div class="term" id="myfxbook"><h2>MyFXBook</h2><p>Un servicio de verificación de terceros que se conecta a cuentas MT4/MT5 y publica estadísticas de trading verificadas. Pivot-Signal mantiene cuentas MyFXBook verificadas.</p></div>
+<div class="term" id="pip"><h2>Pip</h2><p>El movimiento de precio estándar más pequeño en un par de divisas. Para la mayoría de pares: 1 pip = 0,0001. Para pares JPY: 1 pip = 0,01.</p></div>
+<div class="term" id="pivot-point"><h2>Pivot Point</h2><p>Un nivel de precio calculado del máximo, mínimo y cierre del período anterior, usado para identificar niveles potenciales de soporte y resistencia. El EA Pivot-Signal calcula pivotes diarios, semanales y mensuales.</p></div>
+<div class="term" id="position-sizing"><h2>Tamaño de posición</h2><p>Determinación del número de unidades (lotes) a operar según el tamaño de la cuenta y la tolerancia al riesgo. Típicamente 1-2% de la cuenta por operación.</p></div>
+<div class="term" id="resistance"><h2>Resistencia</h2><p>Un nivel de precio donde el interés de venta es suficientemente fuerte para evitar que el precio suba más. A menudo identificado por los niveles R1/R2/R3 del pivote.</p></div>
+<div class="term" id="risk-reward-ratio"><h2>Ratio riesgo/beneficio</h2><p>La relación entre la pérdida potencial y el beneficio potencial. Un ratio 1:2 significa arriesgar 1$ para ganar potencialmente 2$. Pivot-Signal busca mínimo 1:1,5.</p></div>
+<div class="term" id="slippage"><h2>Slippage (Deslizamiento)</h2><p>La diferencia entre el precio esperado de una operación y el precio de ejecución real. Frecuente en alta volatilidad o baja liquidez.</p></div>
+<div class="term" id="spread"><h2>Spread</h2><p>La diferencia entre el precio bid (venta) y ask (compra). El costo de entrar en una operación. Spreads más ajustados son mejores.</p></div>
+<div class="term" id="stop-loss"><h2>Stop Loss</h2><p>Un precio predeterminado al cual una operación perdedora se cierra automáticamente para limitar la pérdida. El EA Pivot-Signal coloca el SL en 10 pips fijos (Pivot) o en la ruptura de vela del SuperTrend (ST).</p></div>
+<div class="term" id="supertrend"><h2>SuperTrend</h2><p>Un indicador de seguimiento de tendencia que traza una línea de stop trailing basada en el ATR. Precio por encima del SuperTrend = tendencia alcista, por debajo = tendencia bajista.</p></div>
+<div class="term" id="support"><h2>Soporte</h2><p>Un nivel de precio donde el interés de compra es suficientemente fuerte para evitar que el precio caiga más. A menudo identificado por los niveles S1/S2/S3 del pivote.</p></div>
+<div class="term" id="take-profit"><h2>Take Profit</h2><p>Un precio predeterminado al cual una operación ganadora se cierra automáticamente para asegurar el beneficio. El EA Pivot-Signal coloca TP1, TP2, TP3 en niveles de pivote sucesivos.</p></div>
+<div class="term" id="timeframe"><h2>Marco temporal</h2><p>El intervalo de gráfico utilizado para el análisis. Pivot-Signal usa D1, W1, MN1 para pivotes; M5 a MN1 para SuperTrend.</p></div>
+<div class="term" id="trend-following"><h2>Seguimiento de tendencia</h2><p>Una estrategia que entra en operaciones en la dirección de la tendencia predominante. El EA Trendfolge usa seguimiento de tendencia multi-marco temporal.</p></div>
+<div class="term" id="volatility"><h2>Volatilidad</h2><p>La tasa de cambio de los precios a lo largo del tiempo. Mayor volatilidad = movimientos de precio más grandes = más oportunidades pero más riesgo.</p></div>
+
+<div class="cta">
+<h3>¿Listo para ver el EA en acción?</h3>
+<p>Obtén nuestro Expert Advisor MT5 gratis + señales diarias de Telegram. Sin depósito requerido para empezar.</p>
+<a href="./index.html#broker">Empezar gratis →</a>
+</div>
+
+</div>
+
+<script type="application/ld+json">
+[
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"ATR (Average True Range)","description":"A volatility indicator that measures the average range of price movement.","url":"https://pivot-signal.com/en/glossary.html#atr"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Backtest","description":"Testing a trading strategy on historical price data to evaluate its performance.","url":"https://pivot-signal.com/en/glossary.html#backtest"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Breakout","description":"A price movement that breaks above resistance or below support, signaling a potential new trend.","url":"https://pivot-signal.com/en/glossary.html#breakout"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Currency Pair","description":"A quote of two currencies, where the first is the base and the second is the quote. EUR/USD = how many USD per 1 EUR.","url":"https://pivot-signal.com/en/glossary.html#currency-pair"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Drawdown","description":"The peak-to-trough decline of an account or strategy.","url":"https://pivot-signal.com/en/glossary.html#drawdown"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Expert Advisor","description":"An automated trading program that runs on MetaTrader 5 and executes trades without manual intervention.","url":"https://pivot-signal.com/en/glossary.html#expert-advisor"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Leverage","description":"Borrowed capital that allows traders to control larger positions with less capital. 1:100 leverage means $1 controls $100.","url":"https://pivot-signal.com/en/glossary.html#leverage"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Lot","description":"A standardized unit of trade size. Standard lot = 100,000 units.","url":"https://pivot-signal.com/en/glossary.html#lot"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Mean Reversion","description":"A trading strategy that assumes prices will return to their average level after moving to an extreme.","url":"https://pivot-signal.com/en/glossary.html#mean-reversion"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"MetaTrader 5","description":"A multi-asset trading platform supporting forex, stocks, futures, and crypto with algorithmic trading via Expert Advisors.","url":"https://pivot-signal.com/en/glossary.html#metatrader-5"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"MyFXBook","description":"A third-party verification service that connects to MT4/MT5 accounts and publishes verified trading statistics.","url":"https://pivot-signal.com/en/glossary.html#myfxbook"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Pip","description":"The smallest standard price movement in a currency pair. For most pairs, 1 pip = 0.0001.","url":"https://pivot-signal.com/en/glossary.html#pip"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Pivot Point","description":"A price level calculated from the previous period's high, low, and close, used to identify potential support and resistance levels.","url":"https://pivot-signal.com/en/glossary.html#pivot-point"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Position Sizing","description":"Determining the number of units to trade based on account size and risk tolerance. Typically 1-2% of account per trade.","url":"https://pivot-signal.com/en/glossary.html#position-sizing"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Resistance","description":"A price level where selling interest is strong enough to prevent the price from rising further.","url":"https://pivot-signal.com/en/glossary.html#resistance"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Risk-Reward Ratio","description":"The ratio of potential loss to potential profit on a trade. A 1:2 ratio means risking $1 to potentially make $2.","url":"https://pivot-signal.com/en/glossary.html#risk-reward-ratio"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Slippage","description":"The difference between the expected price of a trade and the actual execution price.","url":"https://pivot-signal.com/en/glossary.html#slippage"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Spread","description":"The difference between the bid (sell) and ask (buy) price. The cost of entering a trade.","url":"https://pivot-signal.com/en/glossary.html#spread"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Stop Loss","description":"A predetermined price at which a losing trade is automatically closed to limit further loss.","url":"https://pivot-signal.com/en/glossary.html#stop-loss"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"SuperTrend","description":"A trend-following indicator that plots a trailing stop line based on the Average True Range (ATR).","url":"https://pivot-signal.com/en/glossary.html#supertrend"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Support","description":"A price level where buying interest is strong enough to prevent the price from falling further.","url":"https://pivot-signal.com/en/glossary.html#support"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Take Profit","description":"A predetermined price at which a winning trade is automatically closed to lock in profit.","url":"https://pivot-signal.com/en/glossary.html#take-profit"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Timeframe","description":"The chart interval used for analysis. Pivot-Signal uses D1, W1, MN1 for pivots; M5 to MN1 for SuperTrend.","url":"https://pivot-signal.com/en/glossary.html#timeframe"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Trend Following","description":"A strategy that enters trades in the direction of the prevailing trend.","url":"https://pivot-signal.com/en/glossary.html#trend-following"},
+{"@context":"https://schema.org","@type":"DefinedTerm","name":"Volatility","description":"The rate at which price changes over time. Higher volatility = larger price swings.","url":"https://pivot-signal.com/en/glossary.html#volatility"}
+]
+</script>
+
+</body>
+</html>
