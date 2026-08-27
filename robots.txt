@@ -1,11 +1,60 @@
 # Pivot-Signal Robots.txt
+# Updated 2026-08-27 — AI crawlers explicitly allowed for LLM citation surface
 
+# === Default: all well-behaved crawlers ===
 User-agent: *
 Allow: /
 Disallow: /test-all.html
+Disallow: /admin/
+Crawl-delay: 1
 
-# Sitemap
+# === AI crawlers — explicitly allow for AI search visibility ===
+# OpenAI (ChatGPT browse, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude, ClaudeBot)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Anthropic training opt-out — block this if you don't want content used for training
+# (currently ALLOWED — leave as training source)
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google (extended — needed for Gemini training, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl (used by many AI training pipelines)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# === Block AI scrapers that ignore robots.txt / are abusive ===
+User-agent: Bytespider
+Disallow: /
+
+# === Sitemap ===
 Sitemap: https://pivot-signal.com/sitemap.xml
 
-# Crawl-delay for bots
-Crawl-delay: 1
+# === llms.txt — explicit pointer for AI agents ===
+# Served at /llms.txt, see <link rel="llms"> in HTML heads

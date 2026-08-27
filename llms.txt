@@ -8,6 +8,13 @@
 - [French Landing](https://pivot-signal.com/fr/): EA MT5 Gratuit + Signaux Telegram
 - [Spanish Landing](https://pivot-signal.com/es/): EA MT5 Gratis + Señales Telegram
 
+## About & Glossary
+- [English About](https://pivot-signal.com/en/about.html): Who we are, what we build
+- [English Glossary](https://pivot-signal.com/en/glossary.html): 25 trading terms (pivot points, EAs, MyFXBook, etc.)
+- [German Glossary](https://pivot-signal.com/de/glossary.html): 25 Handelsbegriffe erklärt
+- [French Glossary](https://pivot-signal.com/fr/glossary.html): 25 termes de trading
+- [Spanish Glossary](https://pivot-signal.com/es/glossary.html): 25 términos de trading
+
 ## Key Products
 - Pivot Point EA: Mean reversion at S1/S2/S3, P, R1/R2/R3 pivot levels
 - Breakout EA: Range detection + volume confirmation
