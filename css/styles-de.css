@@ -280,8 +280,7 @@
     z-index: 0;
   }
   .ea-box {
-    position: relative; z-index: 1;
-    max-width: 100%; width: 100%;
+    position: relative; z-index: 1;  max-width: 220px; width: auto; margin: 0 auto;
     border-radius: 16px;
     filter: drop-shadow(0 30px 60px rgba(136, 216, 192, 0.25)) drop-shadow(0 0 40px rgba(255,107,26,0.20));
     animation: float 6s ease-in-out infinite;
@@ -443,9 +442,7 @@
   }
 
   /* Card image area — dramatic glow + pedestal */
-  .ea-card-img {
-    width: 100%;
-    aspect-ratio: 1/1;
+  .ea-card-img {  width: 120px; aspect-ratio: 1/1; margin: 0 auto;
     background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(136, 216, 192, 0.18), transparent 70%),
                 radial-gradient(ellipse 60% 50% at 50% 80%, rgba(255, 107, 26, 0.10), transparent 70%),
                 linear-gradient(180deg, #0a0a0f 0%, #050507 100%);
@@ -460,8 +457,7 @@
     background: linear-gradient(90deg, transparent, var(--green), transparent);
     opacity: 0.4;
   }
-  .ea-card-img img {
-    width: auto; height: 100%; max-width: 100%;
+  .ea-card-img img {  width: auto; height: auto; max-width: 80px;
     object-fit: contain;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 30px rgba(136, 216, 192, 0.15));
     transition: transform .4s cubic-bezier(.2, .8, .2, 1);
@@ -572,8 +568,7 @@
     padding: 40px 24px;
     position: relative;
   }
-  .ea-featured-img img {
-    width: 100%; max-width: 320px; height: auto; object-fit: contain;
+  .ea-featured-img img {  width: auto; max-width: 180px; height: auto; object-fit: contain;
     filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 30px rgba(31, 217, 197, 0.20));
   }
   .ea-featured-body {

@@ -1,6 +1,6 @@
-# Root redirect to default language (high priority — overrides index.html)
-# Status 302 = temporary redirect, lets us change default lang later without SEO penalty
-/   /en/   302
+# Root redirect to default language is handled by Edge Function
+# (Accept-Language detection — see netlify/edge-functions/redirect.js)
+# This file only handles pretty-URL redirects below.
 
 # Pretty URL redirects
 /all-eas         /en/all-eas.html         301

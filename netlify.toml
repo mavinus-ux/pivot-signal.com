@@ -3,14 +3,8 @@
 [build]
   publish = "."
 
-# Root redirect with force=true to override the index.html file lookup
-# (Without force, Netlify serves index.html for "/" and ignores the redirect)
-# The _redirects file also has this rule as backup — netlify.toml wins on conflict
-[[redirects]]
-  from = "/"
-  to = "/en/"
-  status = 302
-  force = true
+# Root redirect is now handled by an Edge Function (Accept-Language detection)
+# See [[edge_functions]] block at the bottom of this file
 
 # Pretty URLs
 [[redirects]]
@@ -61,3 +55,9 @@
   for = "*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Edge Function: language-aware redirect on root
+# Must come AFTER [[redirects]] in the file to take effect
+[[edge_functions]]
+  path = "/"
+  function = "redirect"
