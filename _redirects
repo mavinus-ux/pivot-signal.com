@@ -1,3 +1,7 @@
+# Root redirect to default language (high priority — overrides index.html)
+# Status 302 = temporary redirect, lets us change default lang later without SEO penalty
+/   /en/   302
+
 # Pretty URL redirects
 /all-eas         /en/all-eas.html         301
 /custom-ea       /en/custom-ea.html       301
