@@ -3,8 +3,12 @@
 [build]
   publish = "."
 
-# Root redirect is now handled by an Edge Function (Accept-Language detection)
-# See [[edge_functions]] block at the bottom of this file
+# Root redirect to default language (English)
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
 
 # Pretty URLs
 [[redirects]]
@@ -56,8 +60,3 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
-# Edge Function: language-aware redirect on root
-# Must come AFTER [[redirects]] in the file to take effect
-[[edge_functions]]
-  path = "/"
-  function = "redirect"
