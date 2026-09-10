@@ -3,11 +3,14 @@
 [build]
   publish = "."
 
-# Redirect /en/ to root (default language)
+# Root redirect with force=true to override the index.html file lookup
+# (Without force, Netlify serves index.html for "/" and ignores the redirect)
+# The _redirects file also has this rule as backup — netlify.toml wins on conflict
 [[redirects]]
   from = "/"
   to = "/en/"
   status = 302
+  force = true
 
 # Pretty URLs
 [[redirects]]
