@@ -33,8 +33,14 @@
   <link rel="alternate" hreflang="es" href="https://pivot-signal.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://pivot-signal.com/es/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="preload" href="/css/styles-es.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/css/styles-es.css"></noscript>
+<!-- Critical inline CSS to prevent FOUC (Flash Of Unstyled Content).
+     Hides fullscreen overlay and off-screen mobile menu until main CSS loads. -->
+<style>
+  html, body { margin: 0; padding: 0; background: #0a0e1a; color: #fff; }
+  .mobile-menu, .mobile-overlay { display: none !important; }
+</style>
+<!-- Synchronous CSS load (no async preload to avoid FOUC) -->
+<link rel="stylesheet" href="/css/styles-es.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
