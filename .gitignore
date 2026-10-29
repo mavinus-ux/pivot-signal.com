@@ -36,3 +36,7 @@ build/
 # Workspace / session files (not part of site)
 PIVOT-SIGNAL-ZUSAMMENFASSUNG.md
 pivot-point-ea-v5.txt
+
+# Work-in-progress mockups (not part of site)
+/drafts/
+
