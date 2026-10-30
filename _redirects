@@ -17,3 +17,26 @@
 
 # Force HTTPS
 http://pivot-signal.com/*  https://pivot-signal.com/:splat  301!
+
+# === Mavis: Pretty-URL-Kanonisierung (301 auf die .html-Fassung) ===
+# Ohne diese Regel liefern /en/all-eas und /en/all-eas.html identischen Inhalt
+# (Duplicate Content). Die .html-Fassung ist die kanonische, sie steht im Sitemap.
+/en/about  /en/about.html  301
+/en/glossary  /en/glossary.html  301
+/en/all-eas  /en/all-eas.html  301
+/en/custom-ea  /en/custom-ea.html  301
+/en/expert-advisor  /en/expert-advisor.html  301
+/en/impressum  /en/impressum.html  301
+/en/privacy  /en/privacy.html  301
+/de/about  /de/about.html  301
+/de/glossary  /de/glossary.html  301
+/de/all-eas  /de/all-eas.html  301
+/de/custom-ea  /de/custom-ea.html  301
+/de/expert-advisor  /de/expert-advisor.html  301
+/de/impressum  /de/impressum.html  301
+/de/privacy  /de/datenschutz.html  301
+/fr/about  /fr/about.html  301
+/fr/glossary  /fr/glossary.html  301
+/es/about  /es/about.html  301
+/es/glossary  /es/glossary.html  301
+/app  /app/  301

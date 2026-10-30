@@ -16,6 +16,18 @@
 - [German Landing](https://pivot-signal.com/de/): Kostenlose MT5 EAs + Telegram Signale
 - [French Landing](https://pivot-signal.com/fr/): EA MT5 Gratuit + Signaux Telegram
 - [Spanish Landing](https://pivot-signal.com/es/): EA MT5 Gratis + Señales Telegram
+- [Live Signals App](https://pivot-signal.com/app/): Real-time MT5 signal dashboard, WebApplication schema
+
+## Product Pages (SoftwareApplication schema)
+- [All Expert Advisors](https://pivot-signal.com/en/all-eas.html): Comparison of all three EAs (ItemList schema)
+- [Expert Advisor Detail](https://pivot-signal.com/en/expert-advisor.html): Pivot Point EA, Breakout EA, Trendfolge EA - offers, markets, FAQ (SoftwareApplication + FAQPage schema)
+- [Custom EA](https://pivot-signal.com/en/custom-ea.html): Custom Expert Advisor development (SoftwareApplication schema)
+
+## Praxis Guide (PDF)
+- [English Praxis Guide](https://pivot-signal.com/en/praxis-guide.pdf): Practical guide for setting up and running the EAs
+- [German Praxis Guide](https://pivot-signal.com/de/praxis-guide.pdf): Praktischer Leitfaden fuer Einrichtung und Betrieb der EAs
+- [French Praxis Guide](https://pivot-signal.com/fr/praxis-guide.pdf): Guide pratique d'installation et d'utilisation des EAs
+- [Spanish Praxis Guide](https://pivot-signal.com/es/praxis-guide.pdf): Guia practico de instalacion y uso de los EAs
 
 ## About & Glossary
 - [English About](https://pivot-signal.com/en/about.html): Who we are, what we build

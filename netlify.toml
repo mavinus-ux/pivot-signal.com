@@ -60,3 +60,80 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
+# === Mavis: Pretty-URL-Kanonisierung (301 auf die .html-Fassung) ===
+[[redirects]]
+  from = "/en/about"
+  to = "/en/about.html"
+  status = 301
+[[redirects]]
+  from = "/en/glossary"
+  to = "/en/glossary.html"
+  status = 301
+[[redirects]]
+  from = "/en/all-eas"
+  to = "/en/all-eas.html"
+  status = 301
+[[redirects]]
+  from = "/en/custom-ea"
+  to = "/en/custom-ea.html"
+  status = 301
+[[redirects]]
+  from = "/en/expert-advisor"
+  to = "/en/expert-advisor.html"
+  status = 301
+[[redirects]]
+  from = "/en/impressum"
+  to = "/en/impressum.html"
+  status = 301
+[[redirects]]
+  from = "/en/privacy"
+  to = "/en/privacy.html"
+  status = 301
+[[redirects]]
+  from = "/de/about"
+  to = "/de/about.html"
+  status = 301
+[[redirects]]
+  from = "/de/glossary"
+  to = "/de/glossary.html"
+  status = 301
+[[redirects]]
+  from = "/de/all-eas"
+  to = "/de/all-eas.html"
+  status = 301
+[[redirects]]
+  from = "/de/custom-ea"
+  to = "/de/custom-ea.html"
+  status = 301
+[[redirects]]
+  from = "/de/expert-advisor"
+  to = "/de/expert-advisor.html"
+  status = 301
+[[redirects]]
+  from = "/de/impressum"
+  to = "/de/impressum.html"
+  status = 301
+[[redirects]]
+  from = "/de/privacy"
+  to = "/de/datenschutz.html"
+  status = 301
+[[redirects]]
+  from = "/fr/about"
+  to = "/fr/about.html"
+  status = 301
+[[redirects]]
+  from = "/fr/glossary"
+  to = "/fr/glossary.html"
+  status = 301
+[[redirects]]
+  from = "/es/about"
+  to = "/es/about.html"
+  status = 301
+[[redirects]]
+  from = "/es/glossary"
+  to = "/es/glossary.html"
+  status = 301
+[[redirects]]
+  from = "/app"
+  to = "/app/"
+  status = 301
