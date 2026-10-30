@@ -18,6 +18,9 @@ dist/
 build/
 .cache/
 
+# Netlify CLI cache/state (nicht Teil der Website)
+.netlify/
+
 # Env
 .env
 .env.local

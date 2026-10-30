@@ -2,6 +2,10 @@
 
 [build]
   publish = "."
+  # Statische Website ohne Build-Schritt. Der No-Op-Command sorgt dafuer,
+  # dass Netlify die Functions unter netlify/functions trotzdem bundelt
+  # (statt sie als statische Dateien zu veroeffentlichen).
+  command = "echo 'Pivot-Signal: statische Website, kein Build noetig'"
 
 # Root redirect to default language (English)
 [[redirects]]

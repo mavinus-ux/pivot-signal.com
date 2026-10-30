@@ -1,0 +1,42 @@
+name: Deploy to Netlify
+
+# Auto-Deploy: jeder Push auf main wird auf pivot-signal.com ausgeliefert.
+# Netlify-seitige Builds laufen derzeit nicht an (Build-Hook erzeugt keinen
+# Build), deshalb deployt die CLI aus GitHub Actions heraus.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: netlify-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy to Netlify (production)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli@27.16.1
+
+      - name: Deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 981e446e-e6ea-4506-abe9-e8fb9a90f67c
+        run: |
+          printf '{"excludedPaths":["**/.git/**","**/.github/**","**/node_modules/**"],"includedPaths":[]}' > "$RUNNER_TEMP/netlify-filter.json"
+          netlify deploy \
+            --prod \
+            --site="$NETLIFY_SITE_ID" \
+            --filter="$RUNNER_TEMP/netlify-filter.json" \
+            --message="Deploy ${GITHUB_SHA::8} (${GITHUB_REF_NAME})"
