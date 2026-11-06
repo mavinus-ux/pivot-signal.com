@@ -256,45 +256,48 @@
   }
 
   /* ==========================================================
-     MyFXBook Verified Banner (top strip)
+     MyFXBook Verified Banner (Hero, unter den CTA-Buttons)
      ========================================================== */
   .mfx-banner {
-    background: linear-gradient(90deg, rgba(255,107,26,.10), rgba(136,216,192,.06));
-    border-bottom: 1px solid rgba(255,255,255,.08);
-  }
-  .mfx-banner-inner {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 4px;
   }
   .mfx-banner-link {
     display: inline-flex;
     align-items: center;
-    gap: 14px;
-    padding: 10px 0;
-    color: #fff;
+    gap: 12px;
+    padding: 8px 18px 8px 10px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 100px;
     text-decoration: none;
+    transition: all .2s;
+  }
+  .mfx-banner-link:hover {
+    border-color: var(--green);
+    background: rgba(0, 200, 100, 0.06);
   }
   .mfx-banner-badge {
-    height: 34px;
+    height: 32px;
     width: auto;
     display: block;
+    opacity: 0.95;
+    transition: opacity .2s;
   }
-  .mfx-banner-text {
+  .mfx-banner-link:hover .mfx-banner-badge { opacity: 1; }
+  .mfx-banner-cta {
     font-size: 14px;
     font-weight: 600;
-  }
-  .mfx-banner-cta {
-    color: #FF6B1A;
-    font-size: 14px;
-    font-weight: 700;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     white-space: nowrap;
   }
-  .mfx-banner-link:hover .mfx-banner-cta { text-decoration: underline; }
-  @media (max-width: 768px) {
-    .mfx-banner-text { display: none; }
-    .mfx-banner-badge { height: 28px; }
-    .mfx-banner-link { gap: 10px; }
+  .mfx-banner-cta .arrow {
+    color: var(--green);
+    transition: transform .2s;
   }
+  .mfx-banner-link:hover .arrow { transform: translateX(3px); }
 
   .hero p.lead {
     font-size: 18px; color: var(--text-2);
